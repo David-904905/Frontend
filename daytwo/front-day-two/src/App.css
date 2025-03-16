@@ -1,0 +1,23 @@
+.otherProperties
+{
+    padding: 10px;
+    font-weight: bold;
+    margin: 20px;
+    font-family:  Arial, Helvetica, sans-serif;
+}
+
+.backgroundTile
+{
+    color: white;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 20px;
+    padding: 10px;
+    background: maroon;
+}
+
+.backgroundTile h2
+{
+    text-align: center;
+    padding: 10px;
+}
