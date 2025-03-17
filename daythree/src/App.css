@@ -1,0 +1,60 @@
+.backgroundTile 
+{
+    background: teal;
+    padding: 10px;
+    border-radius: 5px;
+    color: white;
+
+}
+
+.backgroundTile h2
+{
+    text-align: center;
+}
+
+.heartIcon
+{
+    font-size: 120px;
+    color: pink;
+}
+
+.bearIcon
+{
+    font-size: 120px;
+    color: brown;
+}
+
+.bankTile{
+    display: flex;
+    text-align: center;
+    background: crimson;
+    padding: 30px;
+    color: white;
+    margin-top: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+.bankTile p {
+    padding: 10px;
+    font-size: 20px;
+}
+
+.bankIcon
+{
+    font-size: 50px;
+}
+
+.container {
+    background: grey;
+    color: white;
+    padding: 30px;
+    margin-top: 15px;
+    border-radius: 5px;
+    transition: 0.1s ease-in-out;
+}
+
+.container:hover
+{
+    padding: 40px;
+}
