@@ -1,74 +1,72 @@
-# Styling in React
+# Javascript 
 
-- In React, you can style your web applcation in various ways, you can use inline styling, you can use dynamic styling, external styling or even styling libraries such as bootstrap, or tailwind css.
+- Javascript has an onload property which allows you to define behaviour when the window has loaded the entire page, including styleshheets and scripts.
 
-## Inline Styling
+- document.createElement("div"); // creating a new element with javaScript
 
-- When working with inline styling, each html element has a style attribute, you can reference that style attribute and then use double braces before adding your styling
+- label.className => dynamically set the class name of an HTML element.
 
-    e.g <h1 style={{backgroundColor: "teal", color: "white"}}>Welcome</h1>
+- container.appendChild(label) => The append child is used to add nest an element inside another.
 
-## Dynamic Rendering
-
-- You can also style your project dynamically, by adding your styling into a style object, and then rendering it dynamically using parenthesis
-
-    const style = {
-        backgroundColor: "teal",
-        color: "white"
-    }
-
-    <h1 style={style}>Welcome</h1>
+- The Array constructor has the "fill" method, which can be used to fill an array with a value. 
 
 
-## External Styling
 
-- Another way to style react components is to use external styling, making use of selectors, styling those selectors in an external file and then importing the file in the JSX file where you want to make use of it.
+## Currying
+
+- Currying is a functional programming technique that transforms a function with multiple arguments into a sequence of functions, each taking a single argument.
+
+- Functions have access to all variables declared at their creation, this is called closure.
 
 
-## Adding Icons 
 
-- In order to add icons, you can use svgs, your own custom images, or you can use the ones available on websites like react-icons.
+## React Revision
 
 - npm install react-icons --save
 
-- This is the page that you will visit to get your icons for styling https://react-icons.github.io/react-icons/
+- sample of using a react icon revision
+    import { AiFillAndroid } from "react-icons/ai";
 
-- In order to increase the size of the icon, use the fontsize property to style it.
+    <AiFillAndroid />
 
-- You can also give it a color and manipulate it to your satisfaction.
+- In order to use a state, you need to import it from the react library.
 
+- A state is used to manage data that can change over time.
 
-# Events in React
+- import { useState } from "react";
 
-- In order to add an event to your react component, you have to add it as an attribute to its element definition, just as if you are specifying a prop
+- const [count, setCount] = useState(0);
 
-- e.g
-    const ButtonElement = () => {
-        return (
-            <>
-                <button onClick={() => console.log("You clicked me!")}>click me</button>
-            </>
-        )
-    }
+- In the previous line above, the state of the count variable is set to zero, and with the aid of the setCount function, we can change the value of the count variable.
+
+- const increment = () => setCount(count + 1); // uses the setCount variable to increase the value of the count variable.
 
 
+# React JS tutorial 18th March 2026
 
-# States and Hooks in React
+## Sharing state with other components
 
-- State is a way to store and manage data that can chane over time and affects how the component renders. We define state using the useState Hook, which allows you to set an initial value and provides a way to update that state.
+- In order to share state between components, you can make use of props, and pass the state variable or the data to be shared as the value of the prop.
 
-- Hooks are a new addition in React 16.8 that lets you use state and other React features without writing a class. The allow you to manage your state inside the functional based components.
+ import { useState } from "react";
 
-- useState() -> This Hook allows us to track state in a functional component. State generally refers to data or properties that need to be tracked in an applicaition.
+ const [count, setCount] = useState(0);
 
-## useState
+ <ComponentOne count={count} />
+ <ComponentTwo count={count} />
 
-- The useState hook makes use of array destructuring. e.g
+ now these two components share the same count data.
 
-    const[data, changeData] = useState();
+- If you pass in a callback function as the initial value of your state, the function will only run when your component gets rendered.
 
-    where data is the data we are watching, and the changeData is the function that is going to change the state of that data.
+## useEffect Hook
 
-- First of all, you have to import the useState from your project. e.g
+- The useEffect is a React Hook used to handle side effects in functional components. Side effects include things like fetching data, updating the DOM, subscribing to events and managing timers.
 
-    import {useState} from "react";
+- To make use of the useEffect react hook, you have to import it
+
+    import { useEffect } from "react";
+
+    useEffect(() => {
+        // your logic here;
+    });

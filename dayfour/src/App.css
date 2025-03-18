@@ -1,0 +1,30 @@
+body
+{
+  background: black;
+  color: white;
+}
+
+.movieTile
+{
+  color: white;
+  background-color: teal;
+  border-radius: 5px;
+  padding: 30px;
+}
+
+.movieTile button
+{
+  padding: 15px;
+  border-radius: 5px;
+  border: none;
+  
+}
+
+.movieTileMultiple
+{
+  color: white;
+  background-color: teal;
+  border-radius: 5px;
+  padding: 30px;
+  margin-top: 10px;
+}
