@@ -1,9 +1,15 @@
+import CounterComponent from "./component/Counter"
+import TodoList from "./component/TodoList"
 import "./App.css"
+
 
 const App = () => {
   
   return (
-    <div>App</div>
+    <>
+      <CounterComponent />
+      <TodoList />
+    </>
   )
 }
 
