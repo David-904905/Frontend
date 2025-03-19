@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 
 // icons
+// tomorrows project is to build a nav bar for a shopping website, it should make use of these components
 import { FaCartShopping } from "react-icons/fa6";
 
 const ShoppingCart = () => {
