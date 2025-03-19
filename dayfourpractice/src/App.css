@@ -1,4 +1,31 @@
-body{
+body
+{
     background: black;
     color: white;
+}
+
+.nameSection
+{
+    background: teal;
+    padding: 30px;
+    border-radius: 5px;
+}
+
+.profileInput
+{
+    background: crimson;
+    padding: 30px;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+
+.profileInput button
+{
+    margin-left: 10px;
+    padding: 10px;
+    border: none;
+    border-radius: 3px;
+    background: black;
+    color: white;
+    font-weight: bold;
 }
