@@ -66,8 +66,12 @@ export default FirstComponent
 
 ```
 
+![alt text](image.png)
+
+
 ## useContext Hook
 
 - useContext Hook allows us to access the contetxt values provided by a context object directly within a functional component. Context provides a way to pass data through the component tree without having to pass props down manually at every level.
 
 
+- 

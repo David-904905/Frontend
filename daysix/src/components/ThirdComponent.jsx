@@ -1,5 +1,6 @@
-import { createContext } from "react";
+import { createContext, useContext } from "react";
 import { Data } from "../App";
+
 
 const ThirdComponent = () => {
     // method one
@@ -14,12 +15,12 @@ const ThirdComponent = () => {
     //     </Data.Consumer>
     // );
     // the more efficient way of doing it.
-    const author = createContext(Data);
+    const {author, age} = useContext(Data); // you can also use useContext;
 
     return (
         <>
             <h2>{author}</h2>
-            <p>Will this work?</p>
+            <p>{age}</p>
         </>
     )
 
