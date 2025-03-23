@@ -29,3 +29,13 @@ const initialState = { count: 0};
 
 - state -> This is the current state value, which you can use in your component.
 
+## Discoveries
+
+- You can change the name of your last git commit using the following command 
+
+```
+ git commit --amend -m "New commit message" 
+ 
+```
+
+
