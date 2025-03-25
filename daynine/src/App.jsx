@@ -1,11 +1,13 @@
 import MealComponent from "./components/MealComponent";
 
 import "./App.css";
+import CalculatorComponent from "./components/CalculatorComonent";
 
 const App = () => {
   return (
     <>
-      <MealComponent />
+      {/* <MealComponent /> */}
+      <CalculatorComponent />
     </>
   )
 }

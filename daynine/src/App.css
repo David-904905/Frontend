@@ -3,3 +3,8 @@ body
   background: black;
   color: white;
 }
+
+.calculator-container
+{
+  height: 100vh;
+}
