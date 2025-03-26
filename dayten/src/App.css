@@ -1,0 +1,100 @@
+body
+{
+    background: black;
+    color: white;
+}
+
+.search-btn-container
+{
+    background: rgb(195, 194, 194);
+    height: 50px;
+    width: 50px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    border-radius: 5px;
+    
+}
+
+.container
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.testimonials-container
+{
+    background: grey;
+    padding: 40px;
+    border-radius: 5px;
+    font-family: cursive;
+}
+
+.button-container
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.button-container button
+{
+    width: 90px;
+    padding: 5px;
+    border-radius: 5px;
+    border: none;
+    background-color: teal;
+    color: white;
+
+
+}
+
+.accordion-btn
+{
+    padding: 10px;
+    width: 100%;
+    background-color: crimson;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.form-container
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    flex-direction: column;
+    background-color: rgb(131, 6, 31);
+    font-family: cursive;
+}
+
+.form-class
+{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+.form-class, label, input
+{
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+}
+
+button
+{
+    padding: 15px;
+    margin-top: 10px;
+    border-radius: 5px;
+    border: none;
+    color: white;
+    background-color: rgb(19, 168, 168);
+    font-family: cursive;
+}
