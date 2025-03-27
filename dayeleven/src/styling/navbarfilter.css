@@ -1,0 +1,43 @@
+body
+{
+    background: white !important;
+    color: black !important;
+}
+
+.nav-filter-container
+{
+    display: flex;
+    flex-direction: column;
+}
+
+.nav-filter-header
+{
+    margin-bottom: 10px;
+    padding: 10px;
+}
+
+.nav-filters
+{
+    display: flex;
+}
+
+
+.filter-button
+{
+    margin-left: 50px;
+    height: 30px;
+    padding: 7px;
+    border: 2px rgb(202, 201, 201) solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    transition: 0.3s ease-in;
+    cursor: pointer;
+}
+
+.filter-button:hover
+{
+    background-color: grey;
+    color: white;
+}

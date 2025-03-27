@@ -1,0 +1,55 @@
+.nav-bar
+{
+    display: flex;
+    justify-content: space-between;
+    background: white;
+    padding: 20px;
+}
+
+.other-btns
+{
+    font-size: 20px;
+    color: black;
+}
+
+.other-btns-child   
+{
+    margin-right: 20px;
+}
+
+.inputsec
+{
+    display: flex;
+    align-items: center;
+}
+
+.inputsec input
+{
+    padding: 7px;
+    border-radius: 5px;
+    border: none;
+    background-color: rgb(228, 226, 226);
+
+}
+
+.search-btn
+{
+    color: black;
+    
+}
+
+.search-btn-container
+{
+    height: 30px;
+    display: flex;
+    align-items: center;
+    background: rgb(228, 226, 226);
+    justify-content: center;
+    width: 30px;
+    margin-left: 15px;
+    border-radius: 7px;
+
+}
+
+
+

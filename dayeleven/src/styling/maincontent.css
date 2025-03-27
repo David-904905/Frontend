@@ -1,0 +1,119 @@
+body
+{
+    background: white ;
+    color: black ;
+}
+
+.items-container
+{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+    max-width: 1200px;
+    padding-top: 60px;
+    margin: 20px;
+    
+    
+}
+
+.item-container
+{
+    display: flex;
+    flex-direction: column;
+    border:  2px solid rgb(219, 219, 219) ;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    overflow: hidden;
+    border-radius: 5px;
+    padding: 5px;
+    margin: 5px;
+    width: 290px;
+    
+
+}
+
+.item-image
+{
+    height: 150px;
+}
+
+.rating-sec
+{
+    display: flex;
+    justify-content: space-around;
+    padding: 5px;
+}
+
+.price-add-to-cart
+{
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+
+
+}
+
+/* responsive ness for smaller screens */
+
+@media (max-width: 1200px)
+{
+    .items-container {
+        grid-template-columns: repeat(4, 1fr); /* 4 items per row on medium sized screens*/
+    }
+
+    .item-container
+    {
+        width: 230px;
+    }
+    .item-image
+    {
+        height: 110px;
+    }
+
+    
+}
+
+@media (max-width: 1024px) {
+    .items-container {
+      grid-template-columns: repeat(3, 1fr);  /* 3 items per row on smaller screens */
+    }
+    .item-container
+    {
+        width: 230px;
+    }
+    .item-image
+    {
+        height: 110px;
+    }
+  }
+  
+  @media (max-width: 820px) {
+    .items-container {
+      grid-template-columns: repeat(2, 1fr);  /* 2 items per row on very small screens */
+    }
+
+    .item-container
+    {
+        width: 230px;
+    }
+    .item-image
+    {
+        height: 110px;
+    }
+  
+  }
+  
+  @media (max-width: 537px) {
+    .items-container {
+      grid-template-columns: 1fr;  /* 1 item per row on mobile devices */
+    }
+
+    .item-container
+    {
+        width: 230px;
+    }
+    .item-image
+    {
+        height: 110px;
+    }
+  
+  }
