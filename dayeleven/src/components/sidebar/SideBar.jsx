@@ -1,8 +1,21 @@
 import { TiShoppingCart } from "react-icons/ti";
+import { useContext, useEffect } from "react";
+import { FilterContext } from "../../contexts/FilterContext";
 
 import "../../styling/sidebar.css";
 
 const SideBar = () => {
+    const { _filter, _setFilter, colorFilter, setColorFilter, currentColor, setCurrentColor } = useContext(FilterContext)
+
+    useEffect(() => {
+        console.log(colorFilter);
+        console.log(currentColor);
+    }, [colorFilter, currentColor])
+
+    const handleColorChange = (e) => {
+        setCurrentColor(e.target.value);
+        currentColor.toLowerCase() === "colorall" ? setColorFilter(false) : setColorFilter(true);
+    }
     return (
         <>
             <div className="sidebar-container">
@@ -12,88 +25,88 @@ const SideBar = () => {
                 </div>
                 <form action="">
                     <label htmlFor="category">Category</label>
-                    <div class="radio-group">
+                    <div className="radio-group">
                         <input type="radio" name="category" id="all" />
-                        <label for="all">All</label>
+                        <label htmlFor="all1">All</label>
                     </div>
-                    <div class="radio-group">
+                    <div className="radio-group">
                         <input type="radio" name="category" />
-                        <label for="all">Sneakers</label>
+                        <label htmlFor="sneakers">Sneakers</label>
                     </div>
-                    <div class="radio-group">
+                    <div className="radio-group">
                         <input type="radio" name="category" />
-                        <label for="all">Flats</label>
+                        <label htmlFor="flats">Flats</label>
                     </div>
-                    <div class="radio-group">
+                    <div className="radio-group">
                         <input type="radio" name="category" />
-                        <label for="all">Sandals</label>
+                        <label htmlFor="sandals">Sandals</label>
                     </div>
-                    <div class="radio-group">
+                    <div className="radio-group">
                         <input type="radio" name="category" />
-                        <label for="all">Heels</label>
+                        <label htmlFor="heels">Heels</label>
                     </div>
                 </form>
 
                 <form action="">
                     <label htmlFor="category">Price</label>
-                    <div class="radio-group">
+                    <div className="radio-group">
                         <input type="radio" name="category" id="all" />
-                        <label for="all">All</label>
+                        <label htmlFor="all2">All</label>
                     </div>
-                    <div class="radio-group">
+                    <div className="radio-group">
                         <input type="radio" name="category" />
-                        <label for="all">$0 - $50</label>
+                        <label htmlFor="zero">$0 - $50</label>
                     </div>
-                    <div class="radio-group">
+                    <div className="radio-group">
                         <input type="radio" name="category" />
-                        <label for="all">$50 - $100</label>
+                        <label htmlFor="fifty">$50 - $100</label>
                     </div>
-                    <div class="radio-group">
+                    <div className="radio-group">
                         <input type="radio" name="category" />
-                        <label for="all">$100 - $150</label>
+                        <label htmlFor="hundred">$100 - $150</label>
                     </div>
-                    <div class="radio-group">
+                    <div className="radio-group">
                         <input type="radio" name="category" />
-                        <label for="all">Over $150</label>
+                        <label htmlFor="onefifty">Over $150</label>
                     </div>
                 </form>
                 <form className="color-form" action="">
-                    <label for="category">Color</label>
+                    <label htmlFor="category">Color</label>
 
-                    <div class="radio-group">
-                        <input type="radio" name="color" id="all" />
-                        <div class="colorwheel all"></div>
-                        <label for="all">All</label>
+                    <div className="radio-group">
+                        <input type="radio" name="color" id="colorall" value="colorall" onChange={(e) => handleColorChange(e)} />
+                        <div className="colorwheel all"></div>
+                        <label htmlFor="colorall">All</label>
                     </div>
 
-                    <div class="radio-group">
-                        <input type="radio" name="color" id="black" />
-                        <div class="colorwheel black"></div>
-                        <label for="black">Black</label>
+                    <div className="radio-group">
+                        <input type="radio" name="color" id="black" value="black" onChange={(e) => handleColorChange(e)}  />
+                        <div className="colorwheel black"></div>
+                        <label htmlFor="black">Black</label>
                     </div>
 
-                    <div class="radio-group">
-                        <input type="radio" name="color" id="blue" />
-                        <div class="colorwheel blue"></div>
-                        <label for="blue">Blue</label>
+                    <div className="radio-group">
+                        <input type="radio" name="color" id="blue" value="blue" onChange={(e) => handleColorChange(e)} />
+                        <div className="colorwheel blue"></div>
+                        <label htmlFor="blue">Blue</label>
                     </div>
 
-                    <div class="radio-group">
-                        <input type="radio" name="color" id="red" />
-                        <div class="colorwheel red"></div>
-                        <label for="red">Red</label>
+                    <div className="radio-group">
+                        <input type="radio" name="color" id="red" value="red" onChange={(e) => handleColorChange(e)}/>
+                        <div className="colorwheel red"></div>
+                        <label htmlFor="red">Red</label>
                     </div>
 
-                    <div class="radio-group">
-                        <input type="radio" name="color" id="green" />
-                        <div class="colorwheel green"></div>
-                        <label for="green">Green</label>
+                    <div className="radio-group">
+                        <input type="radio" name="color" id="green" value="green" onChange={(e) => handleColorChange(e)} />
+                        <div className="colorwheel green"></div>
+                        <label htmlFor="green">Green</label>
                     </div>
 
-                    <div class="radio-group">
-                        <input type="radio" name="color" id="white" />
-                        <div class="colorwheel white"></div>
-                        <label for="white">White</label>
+                    <div className="radio-group">
+                        <input type="radio" name="color" id="white" value="white" onChange={(e) => handleColorChange(e)} />
+                        <div className="colorwheel white"></div>
+                        <label htmlFor="white">White</label>
                     </div>
                 </form>
 
