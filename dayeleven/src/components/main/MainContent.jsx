@@ -6,7 +6,7 @@ import data from "../../db/data";
 import "../../styling/maincontent.css"
 
 const MainContent = () => {
-    const { filter, setFilter } = useContext(FilterContext)
+    const { filter, _setFilter } = useContext(FilterContext)
 
     // const filteredItems = data.filter((item) => {
     //     if(filter === "all") return true;

@@ -11,3 +11,9 @@ body
   background: black;
   font-family: cursive;
 }
+
+.container {
+  display: flex;
+  margin-left: 270px; /* Adjust to match sidebar width */
+  padding: 20px;
+}

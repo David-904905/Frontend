@@ -4,6 +4,7 @@ import { LuUserRoundPlus } from "react-icons/lu";
 import { CiSearch, CiHeart } from "react-icons/ci";
 
 import "../../styling/navbar.css";
+import SideBar from "../sidebar/SideBar";
 
 const NavBar = () => {
     return (
@@ -23,7 +24,7 @@ const NavBar = () => {
                     </div>
                 </nav>
             </div>
-            <hr />
+            <hr style={{width: "100%"}}/>
         </>
     )
 }

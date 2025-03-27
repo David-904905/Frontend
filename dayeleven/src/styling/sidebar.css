@@ -1,0 +1,58 @@
+.sidebar-container {
+    padding: 20px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 250px; /* Adjust width as needed */
+    height: 100vh; /* Full height */
+    background: white; /* Match your theme */
+    color: black; /* Adjust text color */
+    overflow-y: auto; /* Scroll if content overflows */
+    z-index: 1000; /* Ensure it's above other elements */
+}
+
+.sidebar-container form
+{
+    margin-top: 20px;
+}
+
+.radio-group {
+    display: flex;
+    align-items: center;
+    gap: 5px; /* Space between radio and text */
+    margin-top: 5px;
+}
+
+.radio-group input {
+    margin: 0;
+}
+
+/* color wheel */
+
+.radio-group {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Space between elements */
+    margin-bottom: 5px;
+}
+
+.color-form input[type="radio"] {
+    display: none; /* Hide default radio button */
+}
+
+.colorwheel {
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    border: 1px solid black;
+    display: inline-block;
+}
+
+.black { background: black; }
+.blue { background: blue; }
+.red { background: red; }
+.green { background: green; }
+.white { background: white; border: 1px solid gray; }
+.all { background: gray; }
+
+
