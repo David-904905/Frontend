@@ -1,0 +1,69 @@
+
+.navbar
+{
+    display: flex;
+    justify-content: space-between;
+    padding: 2px;
+    align-items: center;
+    padding: 20px;
+    background: black;
+    color: white;
+}
+
+.navbar h2
+{
+    padding-left: 10px;
+}
+
+.nav-links ul
+{
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li a
+{
+    margin-right: 20px;
+    text-decoration: none;
+    transition: 0.2s ease-in;
+}
+
+.nav-links-a {
+    text-decoration: none; 
+    position: relative; 
+    color: white;
+  }
+  
+  
+.nav-links-a:hover {
+    color: grey; 
+    transition: 0.2s ease-in;
+  }
+  
+  
+.nav-links-a:hover::after {
+    content: ''; 
+    position: absolute; 
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px; 
+    background-color: white; 
+    transition: 0.5s ease-in;
+  }
+  
+
+
+.login-or-profile button
+{
+    margin-right: 30px;
+    height: 30px;
+    width: 100px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    background: teal;
+    font-weight: bold;
+    font-family: cursive;
+
+}

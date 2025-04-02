@@ -1,0 +1,72 @@
+.locations {
+    color: white;
+    background: black;
+    padding: 40px 20px;
+}
+
+.locations-section {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Always 3 cards in a row */
+    gap: 20px;
+    justify-content: center;
+    max-width: 1200px; /* Prevents excessive width */
+    margin: 0 auto; /* Centers the grid */
+}
+
+.location-tile {
+    background: #2C2C2C;
+    color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+    width: 100%; /* Ensures tiles are uniform */
+    max-width: 350px; /* Prevents tiles from being too wide */
+    margin: 0 auto; /* Centers individual tiles */
+}
+
+.location-tile h3
+{
+    color: white;
+}
+
+.location-tile:hover {
+    transform: translateY(-5px);
+}
+
+.imgsec {
+    width: 100%;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.imgsec img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover; /* Ensures image fills space nicely */
+    border-radius: 10px;
+}
+
+.section-header{
+    padding-top: 20px;
+    padding-bottom: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+
+/* Responsive: Adjust for smaller screens */
+@media (max-width: 1024px) {
+    .locations-section {
+        grid-template-columns: repeat(2, 1fr); /* 2 cards per row on medium screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .locations-section {
+        grid-template-columns: repeat(1, 1fr); /* 1 card per row on small screens */
+    }
+}
