@@ -1,69 +1,125 @@
-
-.navbar
-{
-    display: flex;
-    justify-content: space-between;
-    padding: 2px;
-    align-items: center;
-    padding: 20px;
-    background: black;
-    color: white;
+/* Navbar styles */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  background: black;
+  color: white;
+  align-items: center;
+  position: relative;
+  z-index: 10;
 }
 
-.navbar h2
-{
-    padding-left: 10px;
+.navbar h2 {
+  padding-left: 10px;
 }
 
-.nav-links ul
-{
-    display: flex;
-    list-style: none;
+.nav-links {
+  display: flex;
+  position: relative;
 }
 
-.nav-links li a
-{
-    margin-right: 20px;
-    text-decoration: none;
-    transition: 0.2s ease-in;
+.nav-links ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+}
+
+.nav-links li a {
+  margin-right: 20px;
+  text-decoration: none;
+  transition: 0.2s ease-in;
+  color: white;
 }
 
 .nav-links-a {
-    text-decoration: none; 
-    position: relative; 
-    color: white;
-  }
-  
-  
+  text-decoration: none;
+  color: white;
+  position: relative;
+}
+
 .nav-links-a:hover {
-    color: grey; 
-    transition: 0.2s ease-in;
-  }
-  
-  
+  color: grey;
+  transition: 0.2s ease-in;
+}
+
 .nav-links-a:hover::after {
-    content: ''; 
-    position: absolute; 
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 2px; 
-    background-color: white; 
-    transition: 0.5s ease-in;
-  }
-  
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: white;
+  transition: 0.5s ease-in;
+}
 
+.login-or-profile button {
+  margin-right: 30px;
+  height: 30px;
+  width: 100px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  background: teal;
+  font-weight: bold;
+  font-family: cursive;
+}
 
-.login-or-profile button
+/* Mobile Drawer Styles */
+.hamburger-icon {
+  display: none;
+  cursor: pointer;
+}
+
+/* Close icon for the drawer */
+.close-icon
 {
-    margin-right: 30px;
-    height: 30px;
-    width: 100px;
-    border: none;
-    border-radius: 5px;
-    color: white;
-    background: teal;
-    font-weight: bold;
-    font-family: cursive;
+  display: none;
+}
 
+
+/* Media Query for responsiveness */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: black;
+    width: 200px;
+    height: 100vh; /* Full screen height for the drawer */
+    flex-direction: column;
+    padding: 30px;
+    z-index: 20; /* Ensure it's above other content */
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.3); /* Optional: Add some shadow for effect */
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .nav-links ul {
+    flex-direction: column;
+    padding: 0;
+  }
+
+  .nav-links li a {
+    margin: 10px 0;
+  }
+
+  .hamburger-icon {
+    display: block;
+    color: white;
+  }
+
+  .close-icon {
+    display: block;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+    color: white;
+    z-index: 30; /* Ensure the close icon is above the menu content */
+  }
 }

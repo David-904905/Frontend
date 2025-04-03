@@ -1,0 +1,32 @@
+.footer   
+{
+    background: #555D50;
+    color: white;
+}
+
+.footer-header
+{
+    display: flex;
+    justify-content: center;
+}
+
+.follow-us
+{
+    display: flex;
+    align-items: center;
+}
+
+.footer-links
+{
+    padding: 10px;
+}
+
+.copy-rightsection
+{
+    padding: 10px;
+}
+
+.social-icons a
+{
+    margin-right: 10px;
+}

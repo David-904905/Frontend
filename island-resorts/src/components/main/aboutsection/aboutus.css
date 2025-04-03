@@ -1,0 +1,17 @@
+.about-us
+{
+    padding: 30px;
+
+}
+
+.head-section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 20px;
+}
+
+.about-text
+{
+    margin-bottom: 40px;
+}

@@ -1,0 +1,57 @@
+.contact-us
+{
+    background: #2C2C2C;
+    color: white;
+}
+
+.form-and-message
+{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsive grid */
+    gap: 20px; /* Spacing between grid items */
+    padding: 20px;
+    justify-content: center;
+}
+
+.message
+{
+    width: 50%;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-header
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+}
+
+.form-section input
+{
+    border-radius: 5px;
+    padding: 10px;
+    border: none;
+    outline: none;
+}
+
+.form-section textarea
+{
+    outline: none;
+    border-radius: 5px;
+    border: none;
+    padding: 10px;
+}
+
+.form-section button
+{
+    height: 30px;
+    width: 90px;
+    border-radius: 5px;
+    border: none;
+    color: white;
+    background: black;
+}

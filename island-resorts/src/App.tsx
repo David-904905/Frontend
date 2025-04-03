@@ -6,6 +6,9 @@ import NavBar from "./components/navigation/NavBar";
 import WelcomeSection from "./components/main/welcomesection/WelcomeSection";
 import ServicesSection from "./components/main/servicessesction/ServicesSection";
 import Locations from "./components/main/locationssection/Locations";
+import AboutUs from "./components/main/aboutsection/AboutUs";
+import Contact from "./components/main/contactsection/Contact";
+import Footer from "./components/main/footersection/Footer";
 
 
 
@@ -16,6 +19,9 @@ const App = () => {
         <WelcomeSection />
         <ServicesSection />
         <Locations />
+        <AboutUs />
+        <Contact />
+        <Footer />
       </>
     )
   }
