@@ -40,6 +40,3 @@ function voidFunction(): void // this specifies that the function does not have 
 
 // never return type
 
-function throwError(msg: string): never {
-    throw new Error(msg);
-}
