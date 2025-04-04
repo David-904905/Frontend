@@ -1,13 +1,13 @@
-import React, { useContext, useEffect } from "react";
+import React, { useContext } from "react";
 import { useState } from "react";
 import { FormContext } from "../../../contexts/FormDataProvider";
 import Ticket from "../ticketorwelcome/Ticket";
 
 const Form = () => {
 
-  // const registeredStored = localStorage.getItem("registered");
+
   const context = useContext(FormContext);
-  const [registered, setRegistered] = useState(false);
+  
 
   const [vfname, setVFname] = useState(false);
   const [vlname, setVLname] = useState(false);
@@ -15,9 +15,6 @@ const Form = () => {
   const [vphone, setVPhone] = useState(false);
   const [vdate, setVDate] = useState(false);
 
-  useEffect(() => {
-    localStorage.setItem("registered", JSON.stringify(registered));
-  }, [registered])
 
   if (!context) {
     return "";
@@ -34,6 +31,8 @@ const Form = () => {
     setPhone,
     date,
     setDate,
+    registered,
+    setRegistered
   } = context;
 
   const validateDate = (ursDate: string): boolean => {
