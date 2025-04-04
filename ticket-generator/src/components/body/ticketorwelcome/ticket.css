@@ -15,7 +15,7 @@
 .ticket-card
 {
     height: 200px;
-    width: 50%;
+    width: 400px;
     background: linear-gradient(to left, grey 0%, #2C2C2C 50%, black 100%);
     border-radius: 20px;
     border: none;
