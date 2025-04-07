@@ -12,7 +12,7 @@ var Car = /** @class */ (function () {
 var Porche = new Car();
 console.log(Porche.start());
 setInterval(function () {
-    console.log(Porche.stop());
+    Porche.stop();
 }, 5000);
 var Roxane = {
     name: 'Roxane',

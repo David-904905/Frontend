@@ -49,3 +49,14 @@ lets say your defining a weather app, and you want to define a set of fixed cond
 
 - Declaration merging in TypeScript referes to the ability to extend or augment an existing declaration, including interfaces. This can be useful when you want to add new properties or methods to an existing interface without modifying the original declaration.
 
+## Generics 
+
+- In TypeScript, generics allow you to create reusable componenet that can work with a variety of types. Generics make it possible for you to define functions, classes, and interfaces that can work with different data types without having to duplicate code.
+
+``` TypeScript
+
+function printInfo<T>(x: T): T {
+    return x;
+}
+
+const str = printInfo<string>("Hello");

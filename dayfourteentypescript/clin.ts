@@ -16,7 +16,7 @@ class Car implements Vehicle
 const Porche = new Car();
 console.log(Porche.start());
 setInterval(() => {
-    console.log(Porche.stop());
+    Porche.stop();
 }, 5000);
 
 

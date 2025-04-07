@@ -10,7 +10,7 @@ interface Monitor
     powerOff(): void;
 }
 
-// The monitor interface is not redeclared, rather it is merged into one
+// The monitor interface is not redeclared, rather it is merged into one. This concept is known as Declaration Merging
 
 const monitorOne: Monitor = 
 {
