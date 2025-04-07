@@ -25,7 +25,7 @@ const Ticket = () => {
         const currentDate = new Date();
 
         const arr: (string | number)[] = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
-        
+        return ""
 
     }
   return (
