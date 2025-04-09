@@ -1,0 +1,61 @@
+.quote-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 20px;
+}
+
+.quote-container {
+  background: white;
+  width: 50%;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-items: center;
+  border: 1px crimson solid;
+}
+
+.quote-sec {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+
+  align-items: center;
+}
+
+.quote p {
+  padding: 10px;
+}
+
+.generate-btn {
+  padding: 10px;
+  margin: 30px;
+  border: none;
+  color: white;
+  background: crimson;
+  border-radius: 5px;
+}
+
+.button-back
+{
+    padding: 10px;
+    font-size: 12px;
+}
+
+@media (max-width: 768px) {
+  .quote p {
+    font-size: 13px;
+  }
+
+  .generate-btn {
+    margin: 20px;
+  }
+
+  .quote-container {
+    width: 100%;
+  }
+}
