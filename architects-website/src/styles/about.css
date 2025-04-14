@@ -1,17 +1,108 @@
-.about
-{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 0;
+.about {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
-.about-contain
-{
+.about-contain {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 70%;
+  margin-top: 10px;
+  background: #fbfbfb;
+  padding: 20px;
+}
+
+.other-sec {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+
+.text-section-about {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 30px;
+}
+
+.text-section-about h2 {
+  padding: 20px;
+  font-size: 64px;
+  font-weight: 100;
+  color: #bdbdbd;
+}
+
+.text-section-about p {
+  width: 50%;
+}
+
+.readmore-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 222px;
+  height: 71px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: 100;
+  font-size: 12px;
+  background: #ffffff;
+  transition: 0.2s ease-in-out;
+  border: none;
+  margin-top: 20px;
+}
+
+.read-more {
+  margin-left: 15px;
+}
+
+.readmore-btn:hover {
+  background: #bdbdbd;
+  border-radius: 5px;
+}
+
+/* media stuff */
+
+@media (max-width: 1050px) {
+  .two-images {
+    display: none;
+  }
+
+  .other-sec {
     display: flex;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    justify-content: space-around;
-    width: 70%;
-    background: rgb(194, 194, 194);;
-    padding: 20px;
+    padding: 10px;
+  }
+
+  .img-section img {
+    display: none;
+  }
+
+  .img-section {
+    height: 300px;
+    width: 100%;
+    background: url("/public/aboutlarge.png") no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .text-section-about p {
+    width: 100%;
+    font-size: 20px;
+  }
+
+  .readmore-btn {
+    font-size: 20px;
+  }
+
+  
 }

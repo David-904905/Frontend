@@ -1,0 +1,178 @@
+.project-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 20px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+
+
+.product-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 70%;
+  margin-top: 10px;
+  padding: 20px;
+}
+
+
+.image-containers
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.header h2
+{
+    font-size: 64px;
+    font-weight: 100;
+    padding-bottom: 10px;
+    color: #bdbdbd;
+}
+
+.first-two
+{
+    display: flex;
+    margin: 10px;
+    
+}
+
+.img-sec-one
+{
+    margin-left: 50px;
+}
+
+/* This section is concerned with the bottom three images in the our projects section */
+
+.three-images
+{
+    margin-left: 20px;
+}
+
+.three-images img
+{
+    padding: 10px;
+    margin-right: 20px
+}
+
+.project-background-image {
+    padding: 30px;
+    position: relative;
+    height: 255px;
+    width: 570px;
+    background: url('/public/aboutone.png') no-repeat center center;
+    background-size: cover;
+    overflow: hidden;
+}
+
+.project-background-image h2
+{
+    font-size: 50px;
+    font-weight: 600;
+    color: white;
+    
+}
+
+.project-background-image::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Adjust the 0.5 for more/less darkness */
+    z-index: 1;
+}
+
+
+.background-text
+{
+    position: relative;
+    z-index: 2;
+    color: white;
+    width: 223px;
+    height: 160px;
+}
+
+.background-text a
+{
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: white;
+    font-size: 12px;
+    font-weight: 100;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.background-text a:first-child
+{
+    margin-left: 10px;
+}
+
+
+.arrow-icon {
+    margin-left: 15px;
+    color: white;
+    fill: white;
+
+}
+
+
+/* all products button */
+
+.products-btn
+{
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+
+.products-btn button
+{
+    background: #333333;
+    height: 71px;
+    width: 222px;
+    color: white;
+    font-size: 12px;
+    margin-right: 50px;
+}
+
+
+
+
+/* responsiveness stuff */
+
+@media (max-width: 1050px)
+{
+    .img-sec-one
+    {
+        display: none;
+    }
+
+    .third-img
+    {
+        display: none;
+    }
+
+    .three-images
+    {
+        display: flex;
+    }
+
+    .project-background-image
+    {
+        width: 680px;
+    }
+
+    .products-btn button
+    {
+        margin-right: 0px;
+        font-size: 15px;
+    }
+}
