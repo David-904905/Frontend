@@ -8,6 +8,16 @@ const Contact = () => {
     const [email, setEmail] = useState('');
     const [interests, setInterests] = useState('');
     const [message, setMessage] = useState('');
+
+    const verifyNumber = () => {
+        const numberRegex = /[]/
+    }
+
+    const verifyEmail = () => {
+        const emailRegex = /[]/
+    }
+
+    
     return (
         <>
             <section className="contact-us">

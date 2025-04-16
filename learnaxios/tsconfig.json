@@ -1,0 +1,11 @@
+{
+  "compilerOptions": {
+    "target": "ES2020",                  // Or ES2015 and above
+    "lib": ["ES2020", "DOM", "ES2020.Promise"],            // Includes Promise, Symbol, etc.
+    "module": "commonjs",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true
+  }
+}
