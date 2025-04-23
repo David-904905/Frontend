@@ -21,7 +21,7 @@ const Products = () => {
                             <img className="img-sec-one" src="/public/about-two.png" alt="" />
                         </div>
                         <div className="three-images">
-                            <img src="/public/about3.png" alt="" />
+                            <img className="three-img-one" src="/public/about3.png" alt="" />
                             <img className="third-img" src="/public/about4.png" alt="" />
                             <img src="/public/about5.png" alt="" />
                         </div>
