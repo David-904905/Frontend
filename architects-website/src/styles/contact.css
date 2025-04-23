@@ -74,3 +74,22 @@
     fill: white;
     margin-right: 30px;
 }
+
+@media (max-width: 768px)
+{
+    .contact-header h2  
+    {
+        font-size: 40px;
+    }
+    .form-container input, .form-container textarea
+    {
+        width: 250px;
+        margin-bottom: 10px;
+    }
+    
+    .send-email-btn
+    {
+        margin-top: 20px;
+        font-size: 12px;
+    }
+}
