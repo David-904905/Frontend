@@ -148,7 +148,7 @@
 
 /* responsiveness stuff */
 
-@media (max-width: 1050px)
+@media (max-width: 1230px)
 {
     .img-sec-one
     {
@@ -174,5 +174,9 @@
     {
         margin-right: 0px;
         font-size: 15px;
+    }
+    .header h2
+    {
+        font-size: 50px;
     }
 }

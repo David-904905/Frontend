@@ -6,3 +6,11 @@
   /* font-family: cursive; */
   color: black;
 }
+
+body
+{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  
+}

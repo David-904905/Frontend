@@ -55,3 +55,45 @@
     margin-right: 100px;
 }
 
+@media (max-width: 1250px)
+{
+    .header-mission-sec h2
+    {
+        font-size: 50px;
+    }
+}
+
+
+@media (max-width: 768px)
+{
+    .mission-statement-stuff
+    {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        
+        
+    }
+
+    .header-mission-sec h2
+    {
+        font-size: 30px;
+
+    }
+
+    .mission-container h2
+    {
+        font-size: 100px;
+    }
+
+    .mission-container.one
+    {
+        width: 100%;
+        font-size: 12px;
+    }
+    .mission-container.two
+    {
+        width: 100%;
+        font-size: 12px;
+    }
+}
