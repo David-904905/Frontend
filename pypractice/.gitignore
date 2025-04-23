@@ -1,0 +1,45 @@
+# Python bytecode files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual environment
+venv/
+env/
+ENV/
+.venv/
+
+# Python distribution packages
+*.egg
+*.egg-info
+dist/
+build/
+
+# IDE/Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# MacOS files
+.DS_Store
+
+# Python test output
+pytest.xml
+nosetests.xml
+coverage.xml
+*.cover
+*.log
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# mypy, pylint, and other linters
+.mypy_cache/
+.pylint.d/
+
+# Misc
+*.bak
+*.tmp
+*.orig
