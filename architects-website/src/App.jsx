@@ -12,6 +12,10 @@ const App = () => {
   return (
     <>
       <NavBarProvider>
+        {/* {
+          body = document.getElementsByTagName('body')
+          oncli
+        } */}
         <NavBar />
         <Home />
         <About />

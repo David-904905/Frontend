@@ -32,6 +32,12 @@ const Contact = () => {
                     <div className="contact-header">
                         <h2>Contact Us</h2>
                     </div>
+                    <div className="contact-message-p">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati quia blanditiis maxime incidunt dignissimos neque necessitatibus quos cupiditate assumenda corrupti?
+                    </div>
+                    <div className="contact-message-p-large">
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illo, aspernatur saepe! Explicabo, totam eligendi accusantium iste, soluta officiis perspiciatis nam perferendis iure id vel unde quod consectetur mollitia enim. At, natus non! Cumque amet consequuntur animi provident reprehenderit nihil! Quisquam aspernatur enim ipsum asperiores ullam nihil, placeat unde voluptatibus odio nisi, fugiat facere dignissimos minima labore officiis architecto repellendus maxime incidunt. Saepe minima natus excepturi repellendus assumenda consequatur libero soluta.
+                    </div>
                     <div className="contact-form-section">
                         <div className="form-container">
                             <form onSubmit={handleSubmit(onSubmit)}>
@@ -109,9 +115,12 @@ const Contact = () => {
                                 </button>
                             </form>
                         </div>
-                        <div className="contact-image">
-                            {/* <img src="/public/contact-us.png" alt="" /> */}
-                        </div>
+                        {/* <div className="contact-image">
+                            
+                        </div> */}
+                        {/* <div className="map-container">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d8096497.553604906!2d0.10379402635927525!3d7.750741604685484!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x104e0be7f76d176f%3A0x9e788c92d18d1ad6!2sWalex%20Biz%20Nigeria!5e0!3m2!1sen!2sng!4v1745485730055!5m2!1sen!2sng" width="600" height="450" style={{ "border": 0}} allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
+                        </div> */}
                     </div>
 
                 </div>

@@ -16,6 +16,7 @@
   width: 70%;
   margin-top: 10px;
   padding: 20px;
+  background: #fbfbfb;
 }
 
 
@@ -30,10 +31,17 @@
 .header h2
 {
     font-size: 64px;
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
     font-weight: 100;
     padding-bottom: 10px;
     color: #bdbdbd;
 }
+
+
+
+
 
 .first-two
 {
@@ -53,7 +61,6 @@
 {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    
     margin-left: 20px;
 }
 
@@ -67,7 +74,7 @@
     padding: 30px;
     position: relative;
     height: 255px;
-    width: 570px;
+    width: 610px;
     background: url('/public/aboutone.png') no-repeat center center;
     background-size: cover;
     overflow: hidden;
@@ -75,7 +82,7 @@
 
 .project-background-image h2
 {
-    font-size: 50px;
+    font-size: 40px;
     font-weight: 600;
     color: white;
     
@@ -126,6 +133,15 @@
 
 }
 
+.project-text-large
+{
+    padding: 30px;
+}
+
+.project-text
+{
+    display: none;
+}
 
 /* all products button */
 
@@ -147,7 +163,38 @@
 }
 
 
+.this-img
+{
+    padding: 30px;
+    position: relative;
+    height: 255px;
+    width: 200%;
+    
+    background: url('/public/about5.png') no-repeat center center;
+    background-size: cover;
+    overflow: hidden;
+    display: none;
+}
 
+.this-img::before
+{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Adjust the 0.5 for more/less darkness */
+    z-index: 1;
+}
+
+.this-img h2
+{
+    font-size: 40px;
+    color: white;
+    margin-top: 40px;
+    
+}
 
 /* responsiveness stuff */
 
@@ -165,10 +212,31 @@
         margin-right: 0;
     }
 
+    .product-container
+    {
+        width: 100%;
+        padding: 40px;
+        text-align: center;
+    }
+    .project-text
+    {
+        display: block;
+        padding: 10px;
+    }
+
+    .project-text-large
+    {
+        display: none;
+    }
+
 }
 
 @media (max-width: 1230px)
 {
+    .product-container
+    {
+        width: 100%;
+    }
     .img-sec-one
     {
         display: none;
@@ -186,21 +254,30 @@
 
     .project-background-image
     {
-        width: 680px;
+        width: 650px;
     }
 
     .products-btn button
     {
-        margin-right: 0px;
+        margin-right: 150px;
         font-size: 15px;
     }
     .header h2
     {
         font-size: 50px;
+        text-align: center;
     }
 }
 
-@media (max-width: 768px)
+@media (max-width: 854px)
+{
+    .products-btn button
+    {
+        margin-right: 50px;
+    }
+}
+
+@media (max-width: 767px)
 {
 
     .image-containers img
@@ -209,8 +286,7 @@
     }
     .project-background-image
     {
-        width: 400px;
-        margin-left: 20px;
+        width: 200%;
         
     }
     .first-two
@@ -219,12 +295,49 @@
         justify-content: center;
         align-items: center;
     }
-    .three-images
+    .three-img-one, .third-img, .thir-img
     {
-        display: flex;
-        width: 70%;
-        justify-content: space-evenly;
-        margin-right: 0;
-        padding-right: 0;
+        display: none;
+    }
+    .this-img
+    {
+        display: block;
+    }
+
+    .products-btn
+    {
+        margin: 0;
+        padding: 0;
+        justify-content: left;
+    }
+
+    .products-btn button 
+    {
+        height: 60px;
+        width: 200px;
+        margin: 20px;
+        border: none;
+        border-radius: 5px;
+    }
+    .product-container
+    {
+        width: 100%;
+    }
+    .header h2
+    {
+        text-align: center;
+    }
+    .header
+    {
+        padding-top: 20px;
+        padding-bottom: 10px;
+    }
+
+    .project-text
+    {
+        display: block;
+        width: 100%;
+        text-align: center;
+        padding: 10px;
     }
 }

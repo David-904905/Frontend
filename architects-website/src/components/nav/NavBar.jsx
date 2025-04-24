@@ -5,8 +5,8 @@ import { GiHamburgerMenu } from "react-icons/gi";
 import { AiOutlineClose } from "react-icons/ai";
 
 const NavBar = () => {
-    const [menuOpen, setMenuOpen] = useState(false);
-    const { clickedLink, setClickedLink } = useContext(NavBarContext);
+    
+    const { clickedLink, setClickedLink, menuOpen, setMenuOpen } = useContext(NavBarContext);
 
     const handleLinkClick = (link) => {
         // Set the clicked link and toggle menu visibility

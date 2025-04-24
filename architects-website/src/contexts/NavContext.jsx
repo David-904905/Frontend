@@ -4,6 +4,7 @@ import { createContext, useState, useEffect } from "react";
 export const NavBarContext = createContext();
 
 export const NavBarProvider = ({ children }) => {
+    const [menuOpen, setMenuOpen] = useState(false);
 
     const storedClicked = localStorage.getItem("clicked") || "home";
 
@@ -14,7 +15,7 @@ export const NavBarProvider = ({ children }) => {
         localStorage.setItem("clicked", clickedLink);
     }, [clickedLink]);
     return (
-        <NavBarContext.Provider value={{ clickedLink, setClickedLink }}>
+        <NavBarContext.Provider value={{ clickedLink, setClickedLink, menuOpen, setMenuOpen }}>
             {children}
         </NavBarContext.Provider>
     )
