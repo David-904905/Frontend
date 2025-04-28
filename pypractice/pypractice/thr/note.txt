@@ -1,0 +1,11 @@
+when you create a thread, you pass it a function and a list containing the arguments to that function
+
+threading.get_indent() -> this returns a unique name for each thread, but the names are usually neither short or easily readable
+
+In computing, a Daemon is a thread that runs in the background.
+
+In python threading, a daemon thread will shut down immediately when the program exits.
+
+When your python program ends, part of the shutdown process is to clean up the threading routine.
+
+
