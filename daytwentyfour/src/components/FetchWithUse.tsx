@@ -1,24 +1,26 @@
 import { use } from "react";
 
-interface ResponseData {
-  userId: number;
-  id: number;
-  title: string;
-  completed: boolean;
+// interface ResponseData {
+//   userId: number;
+//   id: number;
+//   title: string;
+//   completed: boolean;
+// }
+
+// lib/fetchUser.js
+export async function fetchUser(id: number) {
+  const res = await fetch(`https://jsonplaceholder.typicode.com/users/${id}`);
+  if (!res.ok) throw new Error('Failed to fetch user');
+  return res.json();
 }
 
-const fetchDataUse = async (): Promise<ResponseData> => {
-  const response = await fetch("https://jsonplaceholder.typicode.com/todos/1");
-  if (!response.ok) throw new Error("Failed to fetch");
-  return await response.json();
-};
 
 const FetchWithUse = () => {
-  const data = use(fetchDataUse());
+  const data = use(fetchUser(1));
   return (
     <section>
       <div style={{ color: "white" }} className="container">
-        {data.title}
+        {data.name}
       </div>
     </section>
   );

@@ -38,7 +38,7 @@ const {pending, data, method, action} = useFormStatus();
 
 ## Actions
 
-- React 19 introduces Actions, which are asynchronous functions designed to simplify form sbumissions. Actins can be utilizd on both the client and server sides.
+- React 19 introduces Actions, which are asynchronous functions designed to simplify form sbumissions. Actions can be utilizd on both the client and server sides.
 
 - The useActionState is a Hook that allows you to update state based on the result of a form action.
 
@@ -49,3 +49,11 @@ const [state, formAction] = useActionState(fn, initialState);
 
 ```
 
+
+## Use
+
+- The use hook allows you to unwrap promises directly inside components
+
+- This hook can only be used if you are making use of a framework that supports server components like next js, react with cra of vite will not work.
+
+- We can consume contexts directly using this hook, instead of using useContext to consume or context, we can just use 'use' and it will work the same way as useContext, There is no difference really in the aspect of consuming contexts, lol, maybe just cause of a shorted name to type :).

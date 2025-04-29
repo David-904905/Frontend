@@ -1,4 +1,8 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
+
+import { ThemeContext } from "../contexts/Theme";
+
+import "../stylesheets/todo.css";
 
 interface TodoItem {
   userId: number;
@@ -10,6 +14,12 @@ interface TodoItem {
 const FetchTodo = () => {
   const [todo, setTodo] = useState<TodoItem | null>(null);
   const [loading, setLoading] = useState<boolean>(true);
+
+  const context = useContext(ThemeContext)
+  if (!context) {
+    return ""
+  }
+  const { theme, toggleTheme } = context;
 
   useEffect(() => {
     const fetchData = async () => {
@@ -30,12 +40,13 @@ const FetchTodo = () => {
 
   return (
     <>
-      <section className="test">
+      <section className={theme === "light" ? "light" : "dark"}>
         {
           loading ? <h2>Loading...</h2> : <div className="data">
             {todo?.title}
           </div>
         }
+        <button onClick={toggleTheme}>Change Theme</button>
       </section>
     </>
   )
