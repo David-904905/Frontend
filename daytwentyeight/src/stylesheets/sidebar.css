@@ -1,0 +1,77 @@
+.sidebar
+{
+    background: black;
+    color: white;
+    width: 150px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+/* you can manipulate an objects postion, using top, left, right or bottom */
+
+.top-options
+{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.ruler-stuff
+{
+    width: 120px;
+    height: 1px;
+    background: grey;
+}
+
+
+/* links styling */
+
+.links-section
+{
+    margin-top: 30px;
+    
+}
+
+.links-section ul li
+{
+    margin-bottom: 20px;
+    list-style: none;
+}
+
+.links-section a
+{
+    color: white;
+    font-size: 20px;
+}
+
+.top-links-item
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+.top-links-item p
+{
+    font-size: 15px;
+}
+/* Icons styling */
+.home-icon
+{
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+
+
+
