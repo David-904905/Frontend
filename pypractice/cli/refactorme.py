@@ -1,49 +1,34 @@
-from typing import List
 import os
-import re
+from typing import List
 import json
 
+def sort_by_size(directory: str, subdirectory:str = None) -> bool:
+    """
+    Description: This function takes a directory and then sorts all the items in that directory
+    based on size.
 
-def sort_by_extension(folder: List[str], base_dir: str) -> bool:
-    """
-    Description: Function to move files into their respective folders based on extensions
     Params:
-        folder: List[str]
-        base_dir: str
-    Returns:
-        bool
-    """
-    extension_regex = r"^([a-zA-Z]+\d*)\.([a-zA-Z]{1,4})$"
+        directory: str
     
-    for file in folder:
-        match = re.match(extension_regex, file)
-        if match:
-            file_name, file_ext = match.groups()
-            destination = base_dir + f'/{file_ext}/{file_name}.{file_ext}'
-            source = base_dir + f'/{file_name}.{file_ext}'
-            os.rename(source, destination)
-
-
-def sort_by_size(directory: str, subdirectory: str = None) -> bool:
-    """
-    Sort files by size in a directory and its subdirectories.
-
-    Params:
-        directory: str - Root directory to start sorting
-        subdirectory: str - Used for recursive sorting
     Returns:
-        bool - Indicates if operation was successful
+        bool -> In order to indicate if the operation was successful or not
     """
 
     actions: List[dict] = []
+    
+    # base_dir = os.getcwd()
+    # seperator = os.sep # it is better to make use of os.path.join when joining files together, this is a more
+    # modern approach and makes it more readable and easy to use.
 
+    main_dir = os.getcwd()
     base_dir = directory
     current_dir = subdirectory if subdirectory else base_dir
-    main_dir = os.getcwd()  
 
-    # Create sorting folders in current directory
+
     for folder in ['cli_sort_small', 'cli_sort_medium', 'cli_sort_large']:
         os.makedirs(os.path.join(current_dir, folder), exist_ok=True)
+
+
 
     small_destination = os.path.join(current_dir, 'cli_sort_small')
     medium_destination = os.path.join(current_dir, 'cli_sort_medium')
@@ -51,18 +36,20 @@ def sort_by_size(directory: str, subdirectory: str = None) -> bool:
 
     try:
         for entry in os.scandir(current_dir):
-            # Skip the sorting folders
-            if entry.name.startswith("cli_sort_"):
-                continue
+
+            if entry.name.startswith('cli_sort_'):
+                return
 
             if entry.is_file():
                 file_size = entry.stat().st_size
                 source = entry.path
-
-                if file_size < 10_240:
+        
+                if file_size  < 10_240:
                     destination = os.path.join(small_destination, entry.name)
+
                 elif file_size < 1_048_576:
                     destination = os.path.join(medium_destination, entry.name)
+
                 else:
                     destination = os.path.join(large_destination, entry.name)
 
@@ -71,9 +58,8 @@ def sort_by_size(directory: str, subdirectory: str = None) -> bool:
 
             elif entry.is_dir():
                 actions.append({"action": f"cd {entry.path}"})
-                sort_by_size(base_dir, entry.path)  # Recurse
+                sort_by_size(base_dir, entry.path)
 
-        # Ensure logs directory exists
         log_dir = os.path.join(main_dir, "logs")
         os.makedirs(log_dir, exist_ok=True)
         logpath = os.path.join(log_dir, "logfile.jsonl")
@@ -83,10 +69,10 @@ def sort_by_size(directory: str, subdirectory: str = None) -> bool:
                 f.write(json.dumps(value) + "\n")
 
         return True
-
+    
     except Exception as e:
         print(f"An error occurred: {e}")
         return False
-
+    
 if __name__ == "__main__":
     sort_by_size(r'C:\Users\WALEX BIZ GROUP\Documents\David\seventeenthmarch\pypractice\sortme')

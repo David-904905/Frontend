@@ -1,3 +1,25 @@
 {"action": "mkdir C:\\Users\\WALEX BIZ GROUP\\Documents\\David\\pypractice\\wed\\txt"}
 {"action": "mkdir C:\\Users\\WALEX BIZ GROUP\\Documents\\David\\pypractice\\wed\\py"}
 {"action": "mkdir C:\\Users\\WALEX BIZ GROUP\\Documents\\David\\pypractice\\wed\\md"}
+{"action": "cd C:\\Users\\WALEX BIZ GROUP\\Documents\\David\\seventeenthmarch\\pypractice\\sortme\\cli_sort_large"}
+{"action": "cd C:\\Users\\WALEX BIZ GROUP\\Documents\\David\\seventeenthmarch\\pypractice\\sortme\\cli_sort_medium"}
+{"action": "cd C:\\Users\\WALEX BIZ GROUP\\Documents\\David\\seventeenthmarch\\pypractice\\sortme\\cli_sort_small"}
+{"action": "mv C:\\Users\\WALEX BIZ GROUP\\Documents\\David\\seventeenthmarch\\pypractice\\sortme\\file.md C:\\Users\\WALEX BIZ GROUP\\Documents\\David\\seventeenthmarch\\pypractice\\sortme\\cli_sort_small\\file.md"}
+{"action": "mv C:\\Users\\WALEX BIZ GROUP\\Documents\\David\\seventeenthmarch\\pypractice\\sortme\\file.py C:\\Users\\WALEX BIZ GROUP\\Documents\\David\\seventeenthmarch\\pypractice\\sortme\\cli_sort_medium\\file.py"}
+{"action": "mv C:\\Users\\WALEX BIZ GROUP\\Documents\\David\\seventeenthmarch\\pypractice\\sortme\\file.txt C:\\Users\\WALEX BIZ GROUP\\Documents\\David\\seventeenthmarch\\pypractice\\sortme\\cli_sort_medium\\file.txt"}
+{"action": "cd C:\\Users\\WALEX BIZ GROUP\\Documents\\David\\seventeenthmarch\\pypractice\\sortme\\folderone"}
+{"action": "mv C:\\Users\\WALEX BIZ GROUP\\Documents\\David\\seventeenthmarch\\pypractice\\sortme\\index.html C:\\Users\\WALEX BIZ GROUP\\Documents\\David\\seventeenthmarch\\pypractice\\sortme\\cli_sort_medium\\index.html"}
+{"action": "mv C:\\Users\\WALEX BIZ GROUP\\Documents\\David\\seventeenthmarch\\pypractice\\sortme\\folderone\\foldertwo\\file.md C:\\Users\\WALEX BIZ GROUP\\Documents\\David\\seventeenthmarch\\pypractice\\sortme\\folderone\\foldertwo\\cli_sort_small\\file.md"}
+{"action": "mv C:\\Users\\WALEX BIZ GROUP\\Documents\\David\\seventeenthmarch\\pypractice\\sortme\\folderone\\foldertwo\\file.py C:\\Users\\WALEX BIZ GROUP\\Documents\\David\\seventeenthmarch\\pypractice\\sortme\\folderone\\foldertwo\\cli_sort_medium\\file.py"}
+{"action": "mv C:\\Users\\WALEX BIZ GROUP\\Documents\\David\\seventeenthmarch\\pypractice\\sortme\\folderone\\foldertwo\\file.txt C:\\Users\\WALEX BIZ GROUP\\Documents\\David\\seventeenthmarch\\pypractice\\sortme\\folderone\\foldertwo\\cli_sort_medium\\file.txt"}
+{"action": "mv C:\\Users\\WALEX BIZ GROUP\\Documents\\David\\seventeenthmarch\\pypractice\\sortme\\folderone\\foldertwo\\index.html C:\\Users\\WALEX BIZ GROUP\\Documents\\David\\seventeenthmarch\\pypractice\\sortme\\folderone\\foldertwo\\cli_sort_medium\\index.html"}
+{"action": "mv C:\\Users\\WALEX BIZ GROUP\\Documents\\David\\seventeenthmarch\\pypractice\\sortme\\folderone\\file.md C:\\Users\\WALEX BIZ GROUP\\Documents\\David\\seventeenthmarch\\pypractice\\sortme\\folderone\\cli_sort_small\\file.md"}
+{"action": "mv C:\\Users\\WALEX BIZ GROUP\\Documents\\David\\seventeenthmarch\\pypractice\\sortme\\folderone\\file.py C:\\Users\\WALEX BIZ GROUP\\Documents\\David\\seventeenthmarch\\pypractice\\sortme\\folderone\\cli_sort_medium\\file.py"}
+{"action": "mv C:\\Users\\WALEX BIZ GROUP\\Documents\\David\\seventeenthmarch\\pypractice\\sortme\\folderone\\file.txt C:\\Users\\WALEX BIZ GROUP\\Documents\\David\\seventeenthmarch\\pypractice\\sortme\\folderone\\cli_sort_medium\\file.txt"}
+{"action": "cd C:\\Users\\WALEX BIZ GROUP\\Documents\\David\\seventeenthmarch\\pypractice\\sortme\\folderone\\foldertwo"}
+{"action": "mv C:\\Users\\WALEX BIZ GROUP\\Documents\\David\\seventeenthmarch\\pypractice\\sortme\\folderone\\index.html C:\\Users\\WALEX BIZ GROUP\\Documents\\David\\seventeenthmarch\\pypractice\\sortme\\folderone\\cli_sort_medium\\index.html"}
+{"action": "mv C:\\Users\\WALEX BIZ GROUP\\Documents\\David\\seventeenthmarch\\pypractice\\sortme\\file.md C:\\Users\\WALEX BIZ GROUP\\Documents\\David\\seventeenthmarch\\pypractice\\sortme\\cli_sort_small\\file.md"}
+{"action": "mv C:\\Users\\WALEX BIZ GROUP\\Documents\\David\\seventeenthmarch\\pypractice\\sortme\\file.py C:\\Users\\WALEX BIZ GROUP\\Documents\\David\\seventeenthmarch\\pypractice\\sortme\\cli_sort_medium\\file.py"}
+{"action": "mv C:\\Users\\WALEX BIZ GROUP\\Documents\\David\\seventeenthmarch\\pypractice\\sortme\\file.txt C:\\Users\\WALEX BIZ GROUP\\Documents\\David\\seventeenthmarch\\pypractice\\sortme\\cli_sort_medium\\file.txt"}
+{"action": "cd C:\\Users\\WALEX BIZ GROUP\\Documents\\David\\seventeenthmarch\\pypractice\\sortme\\folderone"}
+{"action": "mv C:\\Users\\WALEX BIZ GROUP\\Documents\\David\\seventeenthmarch\\pypractice\\sortme\\index.html C:\\Users\\WALEX BIZ GROUP\\Documents\\David\\seventeenthmarch\\pypractice\\sortme\\cli_sort_medium\\index.html"}
