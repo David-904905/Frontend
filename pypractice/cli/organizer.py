@@ -4,24 +4,55 @@ import re
 import json
 
 
-def sort_by_extension(folder: List[str], base_dir: str) -> bool:
+def sort_by_extension(base_dir: str, subdirectory: str = None) -> bool:
     """
     Description: Function to move files into their respective folders based on extensions
     Params:
-        folder: List[str]
         base_dir: str
+        subdirectory: str | None = None
     Returns:
-        bool
+        bool -> This signifies if the operation was completed or not
     """
-    extension_regex = r"^([a-zA-Z]+\d*)\.([a-zA-Z]{1,4})$"
+
+    actions: List[dict] = []
+    current_dir = subdirectory if subdirectory else base_dir
+    main_dir = os.getcwd()
+
+    try:
+        for entry in os.scandir(current_dir):
+            if entry.is_file():
+                file_name = entry.name
+                print(file_name)
+                file_extension_regex = r"^([\w\-]+(?:\.[\w\-]+)*)\.([a-zA-Z0-9]{1,12})$"
+                match = re.match(file_extension_regex, file_name)
+                if match:
+                    _, file_ext = match.groups()
+                    print("File ext", file_ext)
+                    os.makedirs(os.path.join(current_dir, "cli_app_" + file_ext), exist_ok=True)
+                    ext_folder = os.path.join(current_dir, "cli_app_" +file_ext)
+                    destination = os.path.join(ext_folder, file_name)
+                    source = entry.path
+                    os.rename(source, destination)
+                    actions.append({"action": f"mv {source} {destination}"})
+            elif entry.is_dir():
+                actions.append({"action": f"cd {entry.path}"})
+                sort_by_extension(base_dir, entry.path)
+                
+        log_dir = os.path.join(main_dir, "logs")
+        os.makedirs(log_dir, exist_ok=True)
+        logpath = os.path.join(log_dir, "logfile.jsonl")
+
+
+        with open(logpath, "a") as f:
+            for value in actions:
+                f.write(json.dumps(value) + "\n")
+
+        return True
+
+    except Exception as e:
+        print(f"An error occurred: {e}")
+        return False
     
-    for file in folder:
-        match = re.match(extension_regex, file)
-        if match:
-            file_name, file_ext = match.groups()
-            destination = base_dir + f'/{file_ext}/{file_name}.{file_ext}'
-            source = base_dir + f'/{file_name}.{file_ext}'
-            os.rename(source, destination)
 
 
 def sort_by_size(directory: str, subdirectory: str = None) -> bool:
