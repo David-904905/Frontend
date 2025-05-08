@@ -3,7 +3,7 @@ import os
 import shutil
 
 from  myutils import get_extensions, make_folders
-from organizer import sort_by_folder
+from organizer import sort_by_extension
 
 
 main_parser = argparse.ArgumentParser(
@@ -23,5 +23,5 @@ directory = args.path
 extensions = get_extensions(folder)
 
 if make_folders(extensions, directory):
-    sort_by_folder(folder, directory)
+    sort_by_extension(folder, directory)
     print("operation successful")
