@@ -5,9 +5,14 @@
 
 ``` bash
 
+
 npm i react-beautifyl-dnd
+
 
 
 ```
 
 - I stopped at 13:00:00
+
+
+# Work with cloudinary to handle static files.

@@ -1,14 +1,13 @@
 import argparse
-import os
-import shutil
 
-from  myutils import get_extensions, make_folders
+
 from organizer import sort_by_extension, sort_by_size
 
 main_parser = argparse.ArgumentParser(
-    prog="David Nduonofit's Sort",
+    prog="Terminal Sort",
     description='A CLI tool to sort your files',
-    epilog='Yeah this is an epilog, you get the idea'
+    epilog='This is a tool that sorts all the files in a directory and subdirectory, and also tracks the changes made for future undo actions.'
+    
 )
 
 main_parser.add_argument('--by', type=str, required=True, help='What do you want to sort this folder by?')

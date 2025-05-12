@@ -1,13 +1,16 @@
 import Sidebar from './components/Sidebar'
 import Profile from './components/Profile'
+import { UserDetailsProvider } from './contexts/UserDetails'
 
 import './App.css'
 
 const App = () => {
   return (
     <>
-      <Sidebar />
-      <Profile />
+      <UserDetailsProvider>
+        <Sidebar />
+        <Profile />
+      </UserDetailsProvider>
     </>
   )
 }

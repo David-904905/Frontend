@@ -1,27 +1,62 @@
 import "../stylesheets/profile.css";
+import { useContext, useRef } from "react";
+import { UserContext } from "../contexts/UserDetails";
+
+
+// icons
+import { FaCamera } from "react-icons/fa";
 
 const Profile = () => {
+
+
+  const context = useContext(UserContext)
+  if (!context)
+  {
+    return
+  }
+  const {name, setName, bio, setBio, setCoverImage, setProfileImage } = context
+  const coverImage = useRef<HTMLDivElement | null>(null);
+  const profileImage = useRef<HTMLDivElement | null>(null);
+
+  const handleCoverImage = (image: string) => {}
+  const handleProfileImage = (image: string) => 
+  {
+
+  }
+
   return (
     <div className="profile-dashboard">
       <div className="profile-container">
-        <div className="profile-cover-img">
-          <div className="profile-img"></div>
+        <div className="profile-cover-img" ref={coverImage}>
+          <div className="profile-img" ref={profileImage}>
+            <div className="edit-button">
+              <input type="file" id="profile-upload" style={{
+                "display": "none"
+              }} onChange={(e) => handleProfileImage(e.target.files[0])} />
+              <label htmlFor="profile-upload">
+                <FaCamera className="edit-btn-main"/>
+              </label>
+            </div>
+          </div>
+          <div className="edit-button-cover">
+              <input type="file" id="profile-upload" style={{
+                "display": "none"
+              }} />
+              <label htmlFor="profile-upload">
+                <FaCamera className="edit-btn-main"/>
+              </label>
+            </div>
         </div>
       </div>
       <div className="other-section">
         <div className="info">
-          <h2>Name: David Nduonofit</h2>
+          <h2>Name: {name}</h2>
         </div>
         <div className="about-me">
           <h2>
             Bio:{" "}
             <span style={{ fontWeight: "100", fontSize: "20px" }}>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque vel
-              ea alias, laboriosam corporis officia esse minus magnam earum
-              blanditiis saepe rerum mollitia. Sunt est tempora vel deserunt
-              minima voluptatibus blanditiis quam a distinctio error, quisquam
-              minus necessitatibus consectetur odit ipsam perferendis iusto sit
-              exercitationem esse sint laudantium iste placeat.
+              {bio}
             </span>
           </h2>
         </div>

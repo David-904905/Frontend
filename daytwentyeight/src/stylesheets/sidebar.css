@@ -11,6 +11,7 @@
     align-items: center;
     justify-content: space-between;
     flex-direction: column;
+    z-index: 10;
 }
 
 /* you can manipulate an objects postion, using top, left, right or bottom */
