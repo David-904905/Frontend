@@ -2,6 +2,9 @@ import "../stylesheets/profile.css";
 import { useContext, useRef } from "react";
 import { UserContext } from "../contexts/UserDetails";
 
+// components
+import DisplayData from "./DisplayData";
+import Product from "./Product";
 
 // icons
 import { FaCamera } from "react-icons/fa";
@@ -63,6 +66,7 @@ const Profile = () => {
         <div className="skills-and-other-info">
           <div className="card-slips-tab-stuff">
             <h2>Skills</h2>
+            <Product />
             <ul>
               <li>Lorem ipsum dolor sit amet.</li>
               <li>Lorem ipsum dolor sit amet.</li>
@@ -102,6 +106,7 @@ const Profile = () => {
               <li>Lorem ipsum dolor sit amet.</li>
               <li>Lorem ipsum dolor sit amet.</li>
             </ul>
+            <DisplayData />
           </div>
         </div>
       </div>

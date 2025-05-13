@@ -1,5 +1,8 @@
 import Sidebar from './components/Sidebar'
 import Profile from './components/Profile'
+
+
+// contexts
 import { UserDetailsProvider } from './contexts/UserDetails'
 
 import './App.css'
@@ -10,6 +13,7 @@ const App = () => {
       <UserDetailsProvider>
         <Sidebar />
         <Profile />
+        
       </UserDetailsProvider>
     </>
   )
