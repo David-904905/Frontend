@@ -2,7 +2,7 @@ import { APIProvider, Map } from '@vis.gl/react-google-maps'
 
 const MapStuff = () => {
   return (
-    <APIProvider apiKey='AIzaSyBF9tmaU97RZMtPGynIQtohH6ts9ePaeeA'>
+    <APIProvider apiKey=''>
         <Map 
             style={{
                 width: "100vw",
