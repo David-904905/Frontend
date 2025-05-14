@@ -25,3 +25,4 @@ items: list = [
         "price": 1200
     },
 ]
+

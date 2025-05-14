@@ -83,5 +83,17 @@ uv pip install -r requirements.txt
 
 - FastAPI generates a "schema" with all your API using the OpenAPI standard for defining APIs.
 
-- Schema is a definition or description of something. Not the code that implements it, but just an abstract description.
+- Schema is a definition or description of something. Not the "code" that implements it, but just an abstract description.
 
+
+# Path Parameters
+
+## Predefined Values
+
+- If you have a path operation that receives a path parameter, but you want the possible valid path parameter values to be predefined, you can use a standard Python Enum.
+
+## Request Body
+
+- When you need to send data from a cliekt (let's say, a browser) to your API, you send it as a request body. A request body is data sent by the client to your API. A response body is data sent by your API back to your client.
+
+- To send data, you should use one of: POST (the more common), PUT, DELETE or PATCH.
