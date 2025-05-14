@@ -1,0 +1,26 @@
+.main-image
+{
+    height: 250px;
+    width: 100%;
+    object-fit: cover;
+    position:  relative;
+}
+
+.camera-icon-container
+{
+    position: absolute;
+    right: 0;
+    padding: 30px;
+}
+
+.sub-container
+{
+    height: 30px;
+    background: grey;
+    border: 2px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    border-radius: 50%;
+}
