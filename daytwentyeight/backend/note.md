@@ -120,3 +120,7 @@ name: Annotated[str, name.isupper] = 'AMANDA'
 - You can define a regular expression pattern that the parameter should match.
 
 
+
+## Custom Validation
+
+- To add additional validation to a string, you need to use pydantics aftervalidator, which would validate the first valdation has been performed. like confirming the data's type

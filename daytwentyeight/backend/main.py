@@ -6,9 +6,18 @@ from fastapi.responses import JSONResponse
 # typing
 from typing import Annotated
 
+# pydantic
+from pydantic import AfterValidator
 
-# products section
+# random
+import random
+
+# utils
+from utils.movie_bk_validator import check_valid_id
+
+# database section
 from database.products import items
+from database.movies import movie_data
 
 # models
 from models.product_model import Product
@@ -137,12 +146,31 @@ async def use_more_metadata(
         Query(
             title="Query string",
             description="Endpoint to more information blah",
+            min_length=3,
+            max_length=10,
+            pattern="^[a-zA-Z0-9]{3,}$",
+            alias="more-meta-haha",
             deprecated=True,
-            alias="more-meta-haha"
         )
     ]  = None,
 ):
-    ...
+    # the endpoint will be something similar to this http://localhost:8000/more-meta/?more-meta-haha=water
+    # notice we used more-meta-haha our alias instead of q.
+    if q:
+        return {"q": q}
+    return {"response": "No data"}
+
+# Custom validation
+
+@app.get("/movie/")
+async def get_movie_or_book(
+    id: Annotated[str | None, AfterValidator(check_valid_id)] = None
+):
+    if id:
+        item = movie_data.get(id)
+    else:
+        id, item = random.choice(list(movie_data.items()))
+    return {"id": id, "name": item}
 
 # for main application
 
