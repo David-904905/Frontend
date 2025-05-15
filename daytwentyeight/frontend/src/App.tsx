@@ -1,5 +1,5 @@
-import Sidebar from './components/Sidebar'
-import Profile from './components/Profile'
+import Sidebar from './common/Sidebar'
+import Profile from './components/user/profile/Profile'
 
 
 // contexts

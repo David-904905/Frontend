@@ -1,4 +1,4 @@
-import { useFetchMessage } from "../hooks/FetchData";
+import { useFetchMessage } from "../../../hooks/FetchData";
 
 const DisplayData = () => {
     const url = "http://localhost:8000";

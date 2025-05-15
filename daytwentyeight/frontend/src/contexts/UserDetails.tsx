@@ -9,10 +9,6 @@ interface UserDetails
     setName: React.Dispatch<React.SetStateAction<string>>,
     bio: string,
     setBio: React.Dispatch<React.SetStateAction<string>>,
-    coverImage: File,
-    setCoverImage: React.Dispatch<React.SetStateAction<string>>,
-    profileImage: File,
-    setProfileImage: React.Dispatch<React.SetStateAction<string>>,
 }
 
 interface ChildrenStructure
@@ -28,11 +24,10 @@ export const UserContext = createContext<UserDetails | undefined>(undefined);
 export const UserDetailsProvider = ({children}: ChildrenStructure) => {
     const [name, setName] = useState<string>("David Nduonofit");
     const [bio, setBio] = useState<string>(bioPlaceholder);
-    const [coverImage, setCoverImage] = useState<File | null>(null);
-    const [profileImage, setProfileImage] = useState<File | null>(null);
+    
 
     return (
-        <UserContext.Provider value={{name, setName, bio, setBio, coverImage, setCoverImage, profileImage, setProfileImage}}>
+        <UserContext.Provider value={{name, setName, bio, setBio}}>
             {children}
         </UserContext.Provider>
     )

@@ -1,4 +1,4 @@
-import "../stylesheets/sidebar.css";
+import "../css/sidebar.css";
 
 // react-icons
 import { FaTachometerAlt } from "react-icons/fa";

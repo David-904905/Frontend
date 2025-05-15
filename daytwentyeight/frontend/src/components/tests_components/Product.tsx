@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react"
 
 // custom hooks
-import { fetchSingleProduct } from "../hooks/FetchData"
+import { fetchSingleProduct } from "../../hooks/FetchData";
 
 // interfaces
-import type { SingleProductResponse } from "../interfaces/Interface";
+import type { SingleProductResponse } from "../../interfaces/Interface";
 
 const Product = () => {
     const [id, setId] = useState<number>(0);
