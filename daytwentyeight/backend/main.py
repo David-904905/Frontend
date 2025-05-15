@@ -1,6 +1,11 @@
-from fastapi import FastAPI
+# fastapi
+from fastapi import FastAPI, Query
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse
+
+# typing
+from typing import Annotated
+
 
 # products section
 from database.products import items
@@ -88,6 +93,56 @@ async def create_product(item: Product):
     items.append(item)
     print(items)
     return JSONResponse({"message": "success"}, status_code=201)
+
+
+# Additional validation using Query and Annotated
+# you import Query from fastapi
+
+@app.get("/controlled-items/")
+async def read_item_controlled(q: Annotated[str | None, Query(min_length=3, max_length=50)] = None):
+    results = {"items": items}
+    if q:
+        results.update({"q": q})
+    return results
+
+# adding regualar expressions
+@app.get("/regex-route/")
+async def read_regexed_items(
+    q: Annotated[
+        str | None, Query(min_length=3, max_length=50, pattern="abcdone$")
+    ] = None,
+):
+    # you can declare that a parameter can accept None, but that it's still required. This would force clients
+    # to send a value, even if the value is None
+
+    results = {"items": items}
+    if q:
+        results.update({"q": q})
+    return results
+
+# when you define a query parameter explicitly with Query you can also declare it to receive a list of values, i.e receive 
+# multiple values.
+# q: Annotated[list[str] | None, Query()] = None // to explicitly declare a parameter with type list, you have to use Query()
+# if not it would be interpreted as type list.
+# This is what the url will look like http://localhost:8000/items/?q=foo&q=bar
+# you can also give it a default parameter
+# q: Annotated[list[str] | None, Query()] = ['foo', 'bar']
+
+# you can also create more meta data about a parameter, like title, description, alias or specify if that parameter is deprecated.
+
+@app.get("/more-meta/")
+async def use_more_metadata(
+    q: Annotated[
+        str | None, 
+        Query(
+            title="Query string",
+            description="Endpoint to more information blah",
+            deprecated=True,
+            alias="more-meta-haha"
+        )
+    ]  = None,
+):
+    ...
 
 # for main application
 

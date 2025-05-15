@@ -97,3 +97,26 @@ uv pip install -r requirements.txt
 - When you need to send data from a cliekt (let's say, a browser) to your API, you send it as a request body. A request body is data sent by the client to your API. A response body is data sent by your API back to your client.
 
 - To send data, you should use one of: POST (the more common), PUT, DELETE or PATCH.
+
+
+# Query Parameters and String Validation
+
+## Annotated
+
+- Annotated in python allows developers to declare the type of a reference and provide additional information related to it.
+
+``` Python
+
+from typing import Annotated
+
+name: Annotated[str, name.isupper] = 'AMANDA'
+
+```
+
+- Annotated attaches metadata to a variable which at runtime can be accessed via .__metadata__. It is used extensively in libraries that use Pydantic.
+
+- When using Query inside annotated, you cannot use the default parameter for Query.
+
+- You can define a regular expression pattern that the parameter should match.
+
+
