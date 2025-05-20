@@ -16,3 +16,11 @@ export interface SingleProductResponse
     item?: Product | null,
     error?: string | null
 }
+
+
+export interface DailyQuote
+{
+    q?: string,
+    a?: string,
+    h?: string,
+}

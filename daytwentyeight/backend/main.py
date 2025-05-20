@@ -22,10 +22,15 @@ from database.movies import movie_data
 # models
 from models.product_model import Product
 
-#enums
+# enums
 from enums.model_enum import ModelName
 
+# requests
+import requests
+
 app = FastAPI()
+
+# api_version = '/api/v1'
 
 origins = [
     "http://localhost:5173",
@@ -174,7 +179,13 @@ async def get_movie_or_book(
 
 # for main application
 
-@app.post("/user/profile/update-picture/")
+@app.get("/api/v1/today-quote/")
+async def get_daily_quote():
+    response = requests.get('https://zenquotes.io/api/today')
+    data = response.json()
+    return data[0]
+
+@app.post("api/v1/user/profile/update-picture/")
 async def update_profile_picture(uuid: str, image_url: str) -> JSONResponse:
     """
     Description: Update the profile picture of a specific user\n

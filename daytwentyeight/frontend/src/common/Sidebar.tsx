@@ -8,6 +8,8 @@ import { BiSolidNotepad } from "react-icons/bi";
 import { FaTasks } from "react-icons/fa";
 import { FaUserAlt } from "react-icons/fa";
 import { IoSettingsSharp } from "react-icons/io5";
+import { IoMdNotifications } from "react-icons/io";
+import { NavLink } from "react-router-dom";
 
 const Sidebar = () => {
   return (
@@ -21,17 +23,18 @@ const Sidebar = () => {
         <div className="ruler-stuff"></div>
         <div className="links-section">
             <ul className="top-utilities-link">
-                <li className="top-links-item"><a href=""><FaBookOpen /></a><p>Books</p></li>
-                <li className="top-links-item"><a href=""><CiSaveDown2 /></a><p>Downloads</p></li>
-                <li className="top-links-item"><a href=""><BiSolidNotepad /></a><p>Notes</p></li>
-                <li className="top-links-item"><a href=""><FaTasks /></a><p>Tasks</p></li>
+                <li className="top-links-item"><NavLink to={'/'}><FaBookOpen /></NavLink><p>Books</p></li>
+                <li className="top-links-item"><NavLink to={'/'}><CiSaveDown2 /></NavLink><p>Downloads</p></li>
+                <li className="top-links-item"><NavLink to={'/'}><BiSolidNotepad /></NavLink><p>Notes</p></li>
+                <li className="top-links-item"><NavLink to={'/'}><FaTasks /></NavLink><p>Tasks</p></li>
+                <li className="top-links-item"><NavLink to={'/'}><IoMdNotifications /></NavLink><p>Notifications</p></li>
             </ul>
         </div>
       </div>
       <div className="links-section">
             <ul className="top-utilities-link">
-                <li className="top-links-item"><a href=""><FaUserAlt /></a><p>Profile</p></li>
-                <li className="top-links-item"><a href=""><IoSettingsSharp /></a><p>Settings</p></li>
+                <li className="top-links-item"><NavLink to={'/user'}><FaUserAlt /></NavLink><p>Profile</p></li>
+                <li className="top-links-item"><NavLink to={'/'}><IoSettingsSharp /></NavLink><p>Settings</p></li>
             </ul>
         </div>
     </aside>
