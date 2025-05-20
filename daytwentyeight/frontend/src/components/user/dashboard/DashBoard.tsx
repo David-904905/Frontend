@@ -22,6 +22,7 @@ const DashBoard = () => {
       </div>
       <div className="welcome-text">welcome to book land or something</div>
       <div className="study-quote">
+        <h2>Daily Quote</h2>
         <Quote />
       </div>
       <div className="groups">

@@ -25,6 +25,9 @@ from models.product_model import Product
 # enums
 from enums.model_enum import ModelName
 
+# data
+from datetime import date
+
 # requests
 import requests
 
@@ -181,9 +184,12 @@ async def get_movie_or_book(
 
 @app.get("/api/v1/today-quote/")
 async def get_daily_quote():
-    response = requests.get('https://zenquotes.io/api/today')
-    data = response.json()
-    return data[0]
+    request = requests.get('https://zenquotes.io/api/today')
+    data = request.json()
+    cleaned_data: dict = data[0]
+    day = date.today().day
+    cleaned_data.update({"id": day})
+    return cleaned_data
 
 @app.post("api/v1/user/profile/update-picture/")
 async def update_profile_picture(uuid: str, image_url: str) -> JSONResponse:
