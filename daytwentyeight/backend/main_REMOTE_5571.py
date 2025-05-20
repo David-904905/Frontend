@@ -23,18 +23,10 @@ from database.movies import movie_data
 from models.product_model import Product
 from models.filter_model import FilterParams
 
-# enums
+#enums
 from enums.model_enum import ModelName
 
-# data
-from datetime import date
-
-# requests
-import requests
-
 app = FastAPI()
-
-# api_version = '/api/v1'
 
 origins = [
     "http://localhost:5173",
@@ -213,16 +205,6 @@ async def filter_item(
 
 # for main application
 
-@app.get("/api/v1/today-quote/")
-async def get_daily_quote():
-    request = requests.get('https://zenquotes.io/api/today')
-    data = request.json()
-    cleaned_data: dict = data[0]
-    day = date.today().day
-    cleaned_data.update({"id": day})
-    return cleaned_data
-
-@app.post("api/v1/user/profile/update-picture/")
 
 @app.post("/user/profile/update-picture/")
 async def update_profile_picture(uuid: str, image_url: str) -> JSONResponse:

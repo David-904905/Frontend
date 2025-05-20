@@ -1,5 +1,5 @@
 # fastapi
-from fastapi import FastAPI, Query, Path
+from fastapi import FastAPI, Query
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse
 
@@ -21,20 +21,11 @@ from database.movies import movie_data
 
 # models
 from models.product_model import Product
-from models.filter_model import FilterParams
 
-# enums
+#enums
 from enums.model_enum import ModelName
 
-# data
-from datetime import date
-
-# requests
-import requests
-
 app = FastAPI()
-
-# api_version = '/api/v1'
 
 origins = [
     "http://localhost:5173",
@@ -56,7 +47,7 @@ async def root():
 
 # get a specific item.
 @app.get("/items/{item_id}")
-async def read_item(item_id: int): # type: ignore
+async def read_item(item_id: int):
     try:
         item = items[item_id]
     except IndexError:
@@ -120,7 +111,7 @@ async def create_product(item: Product):
 async def read_item_controlled(q: Annotated[str | None, Query(min_length=3, max_length=50)] = None):
     results = {"items": items}
     if q:
-        results.update({"q": q}) # type: ignore
+        results.update({"q": q})
     return results
 
 # adding regualar expressions
@@ -135,7 +126,7 @@ async def read_regexed_items(
 
     results = {"items": items}
     if q:
-        results.update({"q": q}) # type: ignore
+        results.update({"q": q})
     return results
 
 # when you define a query parameter explicitly with Query you can also declare it to receive a list of values, i.e receive 
@@ -181,48 +172,7 @@ async def get_movie_or_book(
         id, item = random.choice(list(movie_data.items()))
     return {"id": id, "name": item}
 
-
-# using path to declare meta data and for validation
-
-@app.get("/someitem/")
-async def get_some_item(
-    item_id: Annotated[str | None, Path(title="The id of the item to get")],
-    q: Annotated[str | None, Query(alias="item-query")] = None,
-):
-    results = {"item_id": item_id}
-    if q:
-        results.update({"q": q})
-    return results
-
-
-@app.get("/validate-number/")
-async def validate_number(
-    number: Annotated[int, Query(gt=5, lt=10)]
-):
-    # in this code, the number passed in would be less than 3 and greater han 5
-    return {"number": number}
-
-# filter params, creating a model for your data validation
-
-@app.get("/filter-item/")
-async def filter_item(
-    filter_query: Annotated[FilterParams, Query()]
-):
-    return filter_query
-
-
 # for main application
-
-@app.get("/api/v1/today-quote/")
-async def get_daily_quote():
-    request = requests.get('https://zenquotes.io/api/today')
-    data = request.json()
-    cleaned_data: dict = data[0]
-    day = date.today().day
-    cleaned_data.update({"id": day})
-    return cleaned_data
-
-@app.post("api/v1/user/profile/update-picture/")
 
 @app.post("/user/profile/update-picture/")
 async def update_profile_picture(uuid: str, image_url: str) -> JSONResponse:
