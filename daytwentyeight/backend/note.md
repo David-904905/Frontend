@@ -124,3 +124,122 @@ name: Annotated[str, name.isupper] = 'AMANDA'
 ## Custom Validation
 
 - To add additional validation to a string, you need to use pydantics aftervalidator, which would validate the first valdation has been performed. like confirming the data's type
+
+
+
+## Path Parameters and Numeric Validations
+
+- In the same way that you can declare more validations and metadata for query parameters with Query, you can declare the same type of validations and meta data for path parameters with Path.
+
+
+- Note, you have to order the parameters as you need them, placing none defaults before defaults, that is values dont have a default value before values that have a default value.
+
+``` Python
+
+from typing import Annotated
+
+from fastapi import FastAPI, Path
+
+app = FastAPI()
+
+
+@app.get("/items/{item_id}")
+async def read_items(
+    item_id: Annotated[int, Path(title="The ID of the item to get")], q: str
+):
+    results = {"item_id": item_id}
+    if q:
+        results.update({"q": q})
+    return results
+
+
+```
+
+- If you are using annotated, this wont matter.
+
+
+# Number Validations
+
+- With Query and Path, and some other classes, you can declare number constraints, such as greater than, less than etc.
+
+
+## Exampls
+
+``` Python
+
+from typing import Annotated
+
+from fastapi import FastAPI, Path
+
+app = FastAPI()
+
+
+@app.get("/items/{item_id}")
+async def read_items(
+    item_id: Annotated[int, Path(title="The ID of the item to get", ge=1)], q: str
+):
+    results = {"item_id": item_id}
+    if q:
+        results.update({"q": q})
+    return results
+
+```
+
+- For number validations, some of the built-in comparisons we can perform are:
+
+    1. gt -> greater than
+    2. ge -> greater than or equal
+    3. lt -> less than
+    4. le -> less than or equal
+
+
+- Query, Path, and other classes you will see later are subclasses of a common Param class.
+
+- When you call Query, Path and others from fastapi, they are actually functions. That when called, return instances of classes of the same name. So you import Query, which is a function. And when you call it, it returns an instance of a class also named Query. 
+
+
+
+
+# Query Parameter Models
+
+- If you have a group of query parameters that are related, you can create a Pydantic model to declare them.
+
+
+# Multiple Parameters
+
+- You can declare multiple parameters, and then fastapi will notice that there are more than one body parameter in the function, so it will then use the parameter names as keys in the body of the json to be received.
+
+
+``` Python
+
+@app.put("/items/{item_id}")
+async def update_item(item_id: int, item: Item, user: User):
+    results = {"item_id": item_id, "item": item, "user": user}
+    return results
+
+
+```
+
+
+``` JSON
+
+{
+    "item": {
+        "name": "Foo",
+        "description": "The pretender",
+        "price": 42.0,
+        "tax": 3.2
+    },
+    "user": {
+        "username": "dave",
+        "full_name": "Dave Grohl"
+    }
+}
+
+
+```
+
+
+
+
+
