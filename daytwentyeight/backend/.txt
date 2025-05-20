@@ -1,0 +1,34 @@
+int sum_array(int* arr, int n);
+
+bool isZeroArray(int* nums, int numsSize, int** queries, int queriesSize, int* queriesColSize) {
+    for (int i = 0; i < queriesSize; i++)
+    {
+        int min = queries[i][0];
+        int max = queries[i][1];
+
+        int end = (max == 0) ? 1 : max + 1;
+
+        for (int j = min; j < end && numsSize; j++)
+        {
+            if(nums[j] != 0)
+            {
+                nums[j]--;
+            }
+        } 
+    }
+    
+    int sum = sum_array(nums, numsSize);
+
+    return sum == 0;
+
+}
+
+int sum_array(int* arr, int n)
+{
+    int sum = 0;
+    for (int i = 0; i < n; i++)
+    {
+        sum += arr[i];
+    }
+    return sum;
+}
