@@ -213,6 +213,7 @@ async def filter_item(
 
 # for main application
 
+<<<<<<< HEAD
 @app.get("/api/v1/today-quote/")
 async def get_daily_quote():
     request = requests.get('https://zenquotes.io/api/today')
@@ -223,8 +224,10 @@ async def get_daily_quote():
     return cleaned_data
 
 @app.post("api/v1/user/profile/update-picture/")
+=======
 
 @app.post("/user/profile/update-picture/")
+>>>>>>> backup
 async def update_profile_picture(uuid: str, image_url: str) -> JSONResponse:
     """
     Description: Update the profile picture of a specific user\n
