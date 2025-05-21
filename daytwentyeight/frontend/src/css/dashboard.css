@@ -9,7 +9,18 @@
 
 .dashboard-sub-container{
     margin-top: 30px;
-    background: teal;
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+
+}
+
+/* intro and greetings */
+
+.welcome-img-greet
+{
+    border-radius: 50%;
+    margin-right: 20px;
 }
 
 /* groups section */
@@ -20,6 +31,7 @@
     border: 2px solid black;
     border-radius: 5px;
     margin-right: 50px;
+    margin-bottom: 30px;
 
 }
 
@@ -53,6 +65,7 @@
     width: 50px;
     border-radius: 50%;
     border: 2px solid grey;
+    margin-right: 10px;
 }
 
 .notification-count-div
@@ -67,4 +80,81 @@
     background: teal;
     color: white;
     font-size: 12px;
+}
+
+.groups-and-group-chat
+{
+    display: flex;
+    justify-content: space-evenly;
+    padding: 10px;
+}
+
+
+
+.spacing
+{
+    padding: 30px;
+}
+/* quote section and sumary stats */
+
+.quote-and-stats
+{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.study-quote
+{
+    border:  2px solid black;
+    border-radius: 5px;
+    padding: 30px;
+    height: 230px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 40%;
+    margin-right: 50px;
+    margin-bottom: 30px;
+}
+
+.streaks
+{
+    border: 2px solid black;
+    width: 150px;
+    height: 150px;
+}
+
+.other-tile
+{
+    border: 2px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 500px;
+    padding: 30px;
+    margin-bottom: 40px;
+    margin-right: 40px;
+}
+
+.other-tile h3
+{
+    margin: 5px;
+}
+
+.calendar button
+{
+    padding: 5px;
+    margin: 2px;
+}
+
+
+
+@media (max-width: 1125px)
+{
+    .other-tile
+    {
+        margin-right: 40px;
+        color: indigo;
+    }
+
 }
