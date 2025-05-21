@@ -7,7 +7,7 @@ import { CiSaveDown2 } from "react-icons/ci";
 import { BiSolidNotepad } from "react-icons/bi";
 import { FaTasks } from "react-icons/fa";
 import { FaUserAlt } from "react-icons/fa";
-import { IoSettingsSharp } from "react-icons/io5";
+import { IoSettingsSharp, IoShareOutline } from "react-icons/io5";
 import { IoMdNotifications } from "react-icons/io";
 import { NavLink } from "react-router-dom";
 
@@ -28,6 +28,7 @@ const Sidebar = () => {
                 <li className="top-links-item"><NavLink to={'/'}><BiSolidNotepad /></NavLink><p>Notes</p></li>
                 <li className="top-links-item"><NavLink to={'/'}><FaTasks /></NavLink><p>Tasks</p></li>
                 <li className="top-links-item"><NavLink to={'/'}><IoMdNotifications /></NavLink><p>Notifications</p></li>
+                <li className="top-links-item"><NavLink to={'/'}><IoShareOutline /></NavLink><p>Share</p></li>
             </ul>
         </div>
       </div>
