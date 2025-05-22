@@ -1,0 +1,117 @@
+@import "@css/css-variables/variable.css";
+
+.home-main-container {
+    padding: 0;
+    margin: 0;
+    position: relative; /* REQUIRED for ::before overlay to work */
+    background: url('/background/backgroundimage2.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    overflow: hidden; /* Optional: prevents pseudo from spilling */
+}
+
+.home-main-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* overlay color */
+    z-index: 1;
+}
+
+.home-nav-bar
+{
+    color: var(--bg-color);
+    position: relative;
+    z-index: 2;
+    background: var(--text-color);
+    padding: 30px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.logo-x-name h2
+{
+    font-size: 25px;
+}
+
+.home-nav-bar ul
+{
+    list-style: none;
+}
+
+.home-nav-bar a
+{
+    text-decoration: none;
+    color: var(--bg-color);
+}
+
+.nav-links-middle ul
+{
+    display: flex;
+    font-size: 17px;
+}
+
+.nav-links-middle ul li
+{
+    margin-right: 30px;
+    transition: 0.05s ease-in;
+}
+
+.nav-links-middle ul li:hover
+{
+    font-size: 20px;
+}
+
+.nav-links-end ul
+{
+    display: flex;
+    font-size: 17px;
+}
+
+.nav-links-end ul li
+{
+    margin-right: 30px;
+    transition: 0.05s ease-in;
+}
+
+
+.signup-logout
+{
+    height: 40px;
+    width: 80px;
+    background: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    transition: 0.2s ease-in;
+}
+
+.signup-logout:hover
+{
+    background: rgb(83, 83, 83);
+}
+
+
+.login-dashboard
+{
+    height: 40px;
+    width: 80px;
+    background: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    transition: 0.2s ease-in;
+}
+
+
+.login-dashboard:hover
+{
+    background: rgb(83, 83, 83);
+}

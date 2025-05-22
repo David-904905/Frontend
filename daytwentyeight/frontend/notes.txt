@@ -1,0 +1,25 @@
+| Purpose        | Color          | HEX Code  |
+| -------------- | -------------- | --------- |
+| Background     | Ivory White    | `#FAF8F1` |
+| Primary Text   | Charcoal Black | `#2E2E2E` |
+| Accent Color   | Oxford Blue    | `#002147` |
+| Secondary Text | Slate Gray     | `#6E6E6E` |
+| Button/Links   | Burgundy       | `#800020` |
+
+
+| Purpose        | Color         | HEX Code  |
+| -------------- | ------------- | --------- |
+| Background     | Antique White | `#FDF6EC` |
+| Primary Text   | Rich Brown    | `#3E2C23` |
+| Accent Color   | Sage Green    | `#A3B18A` |
+| Secondary Text | Warm Gray     | `#7A7979` |
+| Button/Links   | Dusty Rose    | `#C68677` |
+
+
+| Purpose        | Color         | HEX Code  |
+| -------------- | ------------- | --------- |
+| Background     | White Smoke   | `#F5F5F5` |
+| Primary Text   | Jet Black     | `#1C1C1C` |
+| Accent Color   | Royal Blue    | `#4169E1` |
+| Secondary Text | Cool Gray     | `#B0B0B0` |
+| Button/CTA     | Bright Orange | `#FF6B00` |

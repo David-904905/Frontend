@@ -18,6 +18,9 @@
     "paths": {
       "@interfaces/*": ["interfaces/*"],
       "@hooks/*": ["hooks/*"],
+      "@common/*": ["common/*"],
+      "@contexts/*": ["contexts/*"],
+      "@css/*": ["css/*"],
     },
 
     /* Linting */

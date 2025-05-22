@@ -1,6 +1,14 @@
+import "@css/home.css";
+
+import HomeNav from "./HomeNav";
+
 const Home = () => {
   return (
-    <div>Home</div>
+    <>
+      <div className="home-main-container">
+        <HomeNav />
+      </div>
+    </>
   )
 }
 

@@ -1,18 +1,23 @@
-import Sidebar from './common/Sidebar'
-import Profile from './components/user/profile/Profile'
-
+import { useContext } from 'react'
 import { Outlet } from 'react-router-dom'
 
-
 // contexts
-import { UserDetailsProvider } from './contexts/UserDetails'
-
+import { AuthContext } from '@contexts/AuthContext'
+// components
+import Sidebar from './common/Sidebar'
+// css
 import './App.css'
 
 const App = () => {
+  const context = useContext(AuthContext);
+  if (!context)
+  {
+    return;
+  }
+  const {loginStatus} = context;
   return (
     <> 
-      <Sidebar />
+      {loginStatus && <Sidebar />}
       <div className="outlet-container">
         <Outlet />
       </div>
