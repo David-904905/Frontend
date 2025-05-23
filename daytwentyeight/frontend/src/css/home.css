@@ -28,7 +28,7 @@
     position: relative;
     z-index: 2;
     background: var(--text-color);
-    padding: 30px;
+    padding: 20px;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
@@ -37,6 +37,7 @@
 .logo-x-name h2
 {
     font-size: 25px;
+    font-weight: 700;
 }
 
 .home-nav-bar ul
@@ -114,4 +115,26 @@
 .login-dashboard:hover
 {
     background: rgb(83, 83, 83);
+}
+
+
+/* home message */
+.home-message
+{
+    position: relative;
+    z-index: 2;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    padding: 30px;
+}
+
+
+.home-text-header
+{
+    font-size: 35px;
+    font-weight: 400;
 }

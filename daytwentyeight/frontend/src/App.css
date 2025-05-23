@@ -7,9 +7,10 @@
 }
 
 body {
-  font-family: cursive;
+  font-family: "Montserrat", "cursive";
   overflow-x: hidden;
   background: var(--bg-color);
+
 }
 
 @media (max-width: 768px) {
