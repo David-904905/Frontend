@@ -19,7 +19,7 @@ const HomeNav = () => {
   return (
     <nav className="home-nav-bar">
       <div className="logo-x-name">
-        <h2>Ufune Nwed</h2>
+        <NavLink to={'/'}><h2>Ufune Nwed</h2></NavLink>
       </div>
       <div className="nav-links-middle">
         <ul>

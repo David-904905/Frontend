@@ -13,6 +13,7 @@ import Profile from "./components/user/profile/Profile.tsx";
 import Settings from "./components/user/settings/Settings.tsx";
 import Login from "@common/authcomponents/Login.tsx";
 import SignUp from "@common/authcomponents/SignUp.tsx";
+import NotFound from "@common/errors/NotFound.tsx";
 
 createRoot(document.getElementById("root")!).render(
   <AuthProvider>
@@ -30,6 +31,7 @@ createRoot(document.getElementById("root")!).render(
               <Route index element={<SignUp />} path="sign-up" />
               <Route path="login" element={<Login />} />
             </Route>
+            <Route path="*" element={<NotFound />}/>
           </Route>
         </Routes>
       </BrowserRouter>
