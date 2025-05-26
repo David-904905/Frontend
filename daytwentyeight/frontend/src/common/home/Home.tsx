@@ -2,8 +2,20 @@ import "@css/home.css";
 
 import HomeNav from "./HomeNav";
 import { NavLink } from "react-router-dom";
+import { useContext, useEffect } from "react";
+import { AuthContext } from "@contexts/AuthContext";
 
 const Home = () => {
+  const context = useContext(AuthContext);
+  if (!context) {
+    return;
+  }
+
+  const {setIsHome } = context;
+
+  useEffect(() => {
+    setIsHome(true);
+  }, [])
   return (
     <>
       <div className="home-main-container">

@@ -6,7 +6,7 @@ import { NavLink } from "react-router-dom";
 // context
 
 import { AuthContext } from "@contexts/AuthContext";
-import { useContext, useEffect } from "react";
+import { useContext } from "react";
 
 const HomeNav = () => {
   const context = useContext(AuthContext);
@@ -14,11 +14,8 @@ const HomeNav = () => {
     return;
   }
 
-  const { loginStatus, _isHome, setIsHome } = context;
+  const { loginStatus, } = context;
 
-  useEffect(() => {
-    setIsHome(true);
-  }, [])
   return (
     <nav className="home-nav-bar">
       <div className="logo-x-name">

@@ -8,8 +8,22 @@ import Quote from "./Quote";
 import Calendar from "react-calendar";
 import Groups from "./groups/Groups";
 import PendingTasks from "./PendingTasks";
+import { useContext, useEffect } from "react";
+
+import { AuthContext } from "@contexts/AuthContext";
+
 
 const DashBoard = () => {
+  const context = useContext(AuthContext);
+
+  if (!context)
+  {
+    return;
+  }
+  const {setIsHome} = context;
+  useEffect(() => {
+    setIsHome(false);
+  }, [])
   return (
     <div className="dashboard-container">
       <div className="dashboard-sub-container">

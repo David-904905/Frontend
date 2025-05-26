@@ -1,12 +1,12 @@
 import "@css/profile.css";
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { UserContext } from "../../../contexts/UserDetails";
 
 // components
 
-
 // icons
 import { FaCamera } from "react-icons/fa";
+import { AuthContext } from "@contexts/AuthContext";
 
 const Profile = () => {
   const context = useContext(UserContext);
@@ -22,12 +22,18 @@ const Profile = () => {
     "https://placehold.co/100"
   );
 
-  const handleCoverImage = (e: any) => {
-    
-  };
-  const handleProfileImage = (e: any) => {
+  const handleCoverImage = (e: any) => {};
+  const handleProfileImage = (e: any) => {};
 
-  };
+  const contexttwo = useContext(AuthContext);
+
+  if (!contexttwo) {
+    return;
+  }
+  const { setIsHome } = contexttwo;
+  useEffect(() => {
+    setIsHome(false);
+  }, []);
 
   return (
     <div className="profile-dashboard">
@@ -54,10 +60,7 @@ const Profile = () => {
             alt="profile-image"
             className="profile-image"
           />
-          <label
-            htmlFor="profile-img-upload-btn"
-            className=""
-          >
+          <label htmlFor="profile-img-upload-btn" className="">
             <div className="sub-container">
               <FaCamera className="camera-icon" />
             </div>

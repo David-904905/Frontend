@@ -14,10 +14,10 @@ const App = () => {
   {
     return;
   }
-  const {loginStatus} = context;
+  const {loginStatus, isHome} = context;
   return (
     <> 
-      {loginStatus && <Sidebar />}
+      {loginStatus && !isHome && <Sidebar />}
       <div className="outlet-container">
         <Outlet />
       </div>
