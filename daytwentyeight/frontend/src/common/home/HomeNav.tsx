@@ -14,7 +14,7 @@ const HomeNav = () => {
     return;
   }
 
-  const { loginStatus, isHome, setIsHome } = context;
+  const { loginStatus, _isHome, setIsHome } = context;
 
   useEffect(() => {
     setIsHome(true);

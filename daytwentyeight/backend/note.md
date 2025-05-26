@@ -241,5 +241,186 @@ async def update_item(item_id: int, item: Item, user: User):
 
 
 
+# Body Parameters
+
+- You can instruct fastapi to treate a parameter as a body parameter using the Body() function.
+
+``` Python
+
+async def update_item(
+    item_id: int,
+    item: Item,
+    user: User,
+    importance: Annotated[int, Body()]
+):
+
+```
+
+- the importance will be treated as a Body, alongside item and user.
+
+- By default singluar values are interpreted as query parameters, you don't have to explicitly add a Query, you can just do:
+
+``` Python
+
+q: Union[str, None] = None
 
 
+```
+
+Or in python 3.10
+
+``` Python
+
+
+q: str | None = None
+
+
+```
+
+
+# Body Fields
+
+- You can declare validation and meta data for pydantic models using pydantic's Field.
+
+``` Python
+
+
+class Item(BaseModel):
+    name: str,
+    description: str | None = Field(
+        default=None, title='The description of the item', max_length=300
+    )
+    price: float = Field(gt=0, description='The price must be greater than zero')
+
+
+```
+
+# Body Nested Models
+
+- To use type validation for set, to ensure unique characters, use the following
+
+``` Python
+
+class Item(BaseModel):
+    name: str
+    description: str | None = None
+    price: float
+    tax: float | None = None
+    tags: set[str] = set() # This will make this field a set.
+
+
+```
+
+
+# Declare Request Example Data
+
+- You can declare examples of the data your app can receive. This will be used by the documentation to provide additional information on the sample data that can be expected from that endpoint
+
+``` Python
+
+class Item(BaseModel):
+    name: str,
+    description: str | None = None
+    price: float
+    tax: float | None = None
+
+    model_config = {
+        "json_schema_extra": {
+            "examples" : [
+                {
+                    "name: "Foo",
+                    "description: "A very nice item",
+                    "price": 35.4,
+                    "tax": 3.2
+                }
+            ]
+        }
+    }
+
+
+```
+
+- When using Field() with Pydantic models, you can also declare additional examples.
+
+
+- Open API specific path parameter examples
+
+``` Python
+
+from typing import Annotated
+
+from fastapi import Body, FastAPI
+from pydantic import BaseModel
+
+app = FastAPI()
+
+
+class Item(BaseModel):
+    name: str
+    description: str | None = None
+    price: float
+    tax: float | None = None
+
+
+@app.put("/items/{item_id}")
+async def update_item(
+    *,
+    item_id: int,
+    item: Annotated[
+        Item,
+        Body(
+            openapi_examples={
+                "normal": {
+                    "summary": "A normal example",
+                    "description": "A **normal** item works correctly.",
+                    "value": {
+                        "name": "Foo",
+                        "description": "A very nice Item",
+                        "price": 35.4,
+                        "tax": 3.2,
+                    },
+                },
+                "converted": {
+                    "summary": "An example with converted data",
+                    "description": "FastAPI can convert price `strings` to actual `numbers` automatically",
+                    "value": {
+                        "name": "Bar",
+                        "price": "35.4",
+                    },
+                },
+                "invalid": {
+                    "summary": "Invalid data is rejected with an error",
+                    "value": {
+                        "name": "Baz",
+                        "price": "thirty five point four",
+                    },
+                },
+            },
+        ),
+    ],
+):
+    results = {"item_id": item_id, "item": item}
+    return results
+
+
+```
+
+- There are other data types you can also use such as UUID which you can import from the uuid module.
+
+
+# Cookie Parameters
+
+- You can declare Cookie parameters the same way you define Query and Path parameters.
+
+- To do this first, you need to import cookie from fastapi
+
+``` Python
+
+from typing import Annotated
+from fastapi import Cookie, FastAPI
+
+app = FastAPI()
+
+@app.get('/items/')
+async def read_items(ads_id: Annotated[str | None, Cookie()] = None):
+    return {"ads_id": ads_id}

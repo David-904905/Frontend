@@ -13,7 +13,7 @@ from pydantic import AfterValidator
 import random
 
 # utils
-from utils.movie_bk_validator import check_valid_id
+from utils.validators.movie_bk_validator import check_valid_id
 
 # database section
 from database.products import items
@@ -215,12 +215,14 @@ async def filter_item(
 
 @app.get("/api/v1/today-quote/")
 async def get_daily_quote():
-    request = requests.get('https://zenquotes.io/api/today')
-    data = request.json()
-    cleaned_data: dict = data[0]
-    day = date.today().day
-    cleaned_data.update({"id": day})
-    return cleaned_data
+    request = await requests.get('https://zenquotes.io/api/today')
+    if request:
+        data = request.json()
+        cleaned_data: dict = data[0]
+        day = date.today().day
+        cleaned_data.update({"id": day})
+        return cleaned_data
+    return {"error": "Sorry, could not fetch today's quote"}
 
 @app.post("api/v1/user/profile/update-picture/")
 
