@@ -17,6 +17,11 @@ const Login = () => {
   const [showPassword, setShowPassword] = useState<boolean>(false);
   const [email, setEmail] = useState<string>("");
   const [password, setPassword] = useState<string>("");
+
+  const handleSubmit = (e: any) => {
+    e.preventDefault();
+    console.log(email, password)
+  }
   return (
     <>
       <div className="login-container">
@@ -31,7 +36,7 @@ const Login = () => {
               </p>
             </div>
             <div className="forms-section">
-              <form action="">
+              <form onSubmit={handleSubmit}>
                 <label htmlFor="email">Email (personal or work):</label>
                 <br />
                 <input
@@ -48,6 +53,7 @@ const Login = () => {
                     <input
                       type={showPassword ? "text" : "password"}
                       value={password}
+                      id="password"
                       onChange={(e) => setPassword(e.target.value)}
                     />
                     <button className="login-submit-btn-parent" type="submit">

@@ -141,6 +141,12 @@
     padding: 7px;
     border-radius: 5px;
     margin-top: 10px;
+    transition: 0.2s ease-in-out;
+}
+
+.otherauth-services-container:hover
+{
+    background: rgb(83, 83, 83);
 }
 
 .otherauth-services-container p

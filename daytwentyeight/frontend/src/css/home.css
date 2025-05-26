@@ -8,7 +8,7 @@
     background-size: cover;
     background-repeat: no-repeat;
     height: 100vh;
-    overflow: hidden; /* Optional: prevents pseudo from spilling */
+    
 }
 
 .home-main-container::before {
@@ -161,6 +161,29 @@
     font-weight: 500;
     
 }
+
+/* mobile section */
+
+.nav-link-wrapper
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 40%;
+}
+
+.burger
+{
+    display: none;
+}
+
+.close-nav-btn
+{
+    display: none;
+}
+
+/* media queries */
+
 
 /* animations */
 
