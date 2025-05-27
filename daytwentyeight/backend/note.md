@@ -424,3 +424,54 @@ app = FastAPI()
 @app.get('/items/')
 async def read_items(ads_id: Annotated[str | None, Cookie()] = None):
     return {"ads_id": ads_id}
+
+```
+
+# Header Parameters
+
+- To make use of headers, you need to import it from fastapi, the Headers function, has lots of benefits, it performs automatic file conversions so you dont have to worry about it.
+
+``` Python
+
+from typing import Annotated
+
+from fastapi import FastAPI, Header
+
+app = FastAPI()
+
+@app.get("/items/")
+async def read_items(
+    strange_header: Annotated[str | None, Header(convert_underscores=False)] = None,
+):
+    return  {"strange_headers": strange_header}
+
+```
+
+- Setting convert_underscores like in the examples above will not perform automatic conversion.
+
+
+
+# Cookie Parameter Models
+
+- If you have a group of cookies that are related, you can create a Pydantic model to declare them. Effectively allowing you to reuse the model.
+
+
+# Response Model - Return Type
+
+- You can declare the type used for the response by annotating the path operation function return type.
+
+- To make use of EmailStr from pydantic, make sure you first install email-validator. 
+
+``` bash
+
+pip install email-validator
+
+```
+
+or
+
+``` bash
+
+pip install "pydantic[email]"
+
+```
