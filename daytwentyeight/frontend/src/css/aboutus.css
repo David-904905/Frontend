@@ -1,0 +1,101 @@
+@import "@css/css-variables/variable.css";
+
+.about-us-container
+{
+    display: flex;
+    flex-direction: column;
+}
+
+.about-us-header
+{
+    font-size: 23px;
+    padding: 70px 30px 0px 30px;
+}
+
+.about-message-main
+{
+    width: 600px;
+}
+
+.briefing
+{
+    padding: 25px;
+}
+
+.second-about-section
+{
+    padding: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3rem;
+    align-items: center;
+}
+
+.mission-img 
+{
+    height: 400px;
+    width: 700px;
+    border-radius: 20px;
+    background: url('/aboutus/firstabout.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 20px;
+}
+
+.mission-statement-container
+{
+    background: var(--button-color);
+    color: var(--bg-color);
+    height: 500px;
+    display: flex;
+    align-items: center;
+}
+
+.mission-statement-header h2
+{
+    padding: 30px;
+    font-size: 25px;
+    font-weight: 700;
+}
+
+.mission-list-container
+{
+    display: flex;
+    padding: 30px;
+    gap: 5rem;
+    flex-wrap: wrap;
+}
+
+.count-n-messages
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4rem;
+    width: 300px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid var(--bg-color);
+}
+
+.count-n-messages h2
+{
+    font-size: 90px;
+}
+
+.mission-briefing
+{
+    padding: 0 30px 0 30px;
+
+}
+
+
+/* media queries */
+
+@media (max-width: 1024px) {
+    .mission-statement-container
+    {
+        height: auto;
+    }
+}

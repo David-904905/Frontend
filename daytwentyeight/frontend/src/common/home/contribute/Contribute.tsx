@@ -1,6 +1,6 @@
 const Contribute = () => {
   return (
-    <div>Contribute</div>
+    <div id="contribute">Contribute</div>
   )
 }
 

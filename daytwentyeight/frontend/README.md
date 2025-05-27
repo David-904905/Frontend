@@ -96,3 +96,9 @@ npm i react-beautifyl-dnd
 
 
 ```
+
+- Find your pdf's in a centralised place, sorted acording to groups and relevance, so that you dont have to look for different pdf's or do that manually. create an environment such that you can study, take notes and stuff like that. 
+
+- Find a way so you can open a browser window inside the application so the user can perform research, or choose an AI model that was built for research and answering questions.
+
+- Build a chrome extension. Project

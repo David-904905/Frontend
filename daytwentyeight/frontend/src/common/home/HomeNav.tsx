@@ -38,13 +38,17 @@ const HomeNav = () => {
         <div className="nav-links-middle">
           <ul>
             <li>
-              <NavLink to={"/"} onClick={() => setMenuOpen(false)}>About</NavLink>
+              <a href="/#about-us" onClick={() => setMenuOpen(false)}>About</a>
+              
             </li>
             <li>
-              <NavLink to={"/"} onClick={() => setMenuOpen(false)}>Contact Us</NavLink>
+              <a href='/#mission-statement' onClick={() => setMenuOpen(false)}>Mission</a>
             </li>
             <li>
-              <NavLink to={"/"} onClick={() => setMenuOpen(false)}>Contribute</NavLink>
+              <a href='/#contribute' onClick={() => setMenuOpen(false)}>Contact Us</a>
+            </li>
+            <li>
+              <a href='/#contact-us' onClick={() => setMenuOpen(false)}>Contribute</a>
             </li>
           </ul>
         </div>
