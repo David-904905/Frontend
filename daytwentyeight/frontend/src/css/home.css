@@ -1,217 +1,249 @@
 @import "@css/css-variables/variable.css";
 
 .home-main-container {
-    padding: 0;
-    margin: 0;
-    position: relative; /* REQUIRED for ::before overlay to work */
-    background: url('/background/backgroundimage2.png');
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: 100vh;
-    
+  padding: 0;
+  margin: 0;
+  position: relative;
+  background: url("/background/backgroundimage2.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  z-index: 0;
 }
 
 .home-main-container::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    background-color: rgba(0, 0, 0, 0.694); /* overlay color */
-    z-index: 1;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.694);
+  z-index: 1;
 }
 
-.home-nav-bar
+.home-nav-bar {
+  color: var(--bg-color);
+  position: fixed;
+  width: 100%;
+  z-index: 2;
+  background: var(--text-color);
+  padding: 20px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.logo-x-name
 {
-    color: var(--bg-color);
-    position: relative;
-    z-index: 2;
-    background: var(--text-color);
-    padding: 20px;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
+    transition: 0.6s ease-in;
 }
 
-.logo-x-name h2
-{
-    font-size: 25px;
-    font-weight: 700;
+.logo-x-name h2 {
+  font-size: 25px;
+  font-weight: 700;
 }
 
-.home-nav-bar ul
-{
-    list-style: none;
+.home-nav-bar ul {
+  list-style: none;
 }
 
-.home-nav-bar a
-{
-    text-decoration: none;
-    color: var(--bg-color);
+.home-nav-bar a {
+  text-decoration: none;
+  color: var(--bg-color);
 }
 
-.nav-links-middle ul
-{
-    display: flex;
-    font-size: 17px;
+.nav-links-middle ul,
+.nav-links-end ul {
+  display: flex;
+  font-size: 17px;
 }
 
-.nav-links-middle ul li
-{
-    margin-right: 30px;
-    transition: 0.05s ease-in;
+.nav-links-middle ul li,
+.nav-links-end ul li {
+  margin-right: 30px;
+  transition: 0.05s ease-in;
 }
 
-.nav-links-middle ul li:hover
-{
-    font-size: 20px;
+.nav-links-middle ul li:hover {
+  font-size: 20px;
 }
 
-.nav-links-end ul
-{
-    display: flex;
-    font-size: 17px;
+.signup-logout,
+.login-dashboard {
+  height: 40px;
+  background: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  transition: 0.2s ease-in;
 }
 
-.nav-links-end ul li
-{
-    margin-right: 30px;
-    transition: 0.05s ease-in;
+.signup-logout {
+  width: 80px;
 }
 
-
-.signup-logout
-{
-    height: 40px;
-    width: 80px;
-    background: black;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 5px;
-    transition: 0.2s ease-in;
+.signup-logout:hover,
+.login-dashboard:hover {
+  background: rgb(83, 83, 83);
 }
 
-.signup-logout:hover
-{
-    background: rgb(83, 83, 83);
+.login-dashboard {
+  width: 110px;
 }
 
-
-.login-dashboard
-{
-    height: 40px;
-    width: 110px;
-    background: black;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 5px;
-    transition: 0.2s ease-in;
+/* Mobile Nav Toggle */
+.nav-link-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 40%;
+  transition: transform 0.3s ease-in-out;
 }
 
-
-.login-dashboard:hover
-{
-    background: rgb(83, 83, 83);
+.burger,
+.close-nav-btn {
+  display: none;
+  cursor: pointer;
 }
-
 
 /* home message */
-.home-message
+.home-message {
+  position: relative;
+  z-index: 2;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+  padding: 30px;
+  animation: welcomeMessage linear 0.5s;
+}
+
+.home-message h2 {
+  font-size: 35px;
+  font-weight: 400;
+}
+
+.learn-more-link {
+  transition: 0.2s ease-in-out;
+}
+
+.learn-more-link:hover {
+  filter: drop-shadow(20px 20px 30px rgb(91, 66, 255));
+}
+
+.learn-more-link a {
+  color: rgb(135, 135, 135);
+  font-weight: 500;
+}
+
+.hideme
 {
-    position: relative;
-    z-index: 2;
-    color: white;
+    display: none;
+}
+
+/* Mobile Responsive Nav */
+@media (max-width: 1540px) {
+  .burger {
+    display: block;
+    font-size: 30px;
+  }
+
+  .nav-link-wrapper {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: black;
+    height: 100vh;
+    width: 300px;
+    flex-direction: column;
+    justify-content: right;
+    padding: 20px;
+    z-index: 200000;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.3);
+    transform: translateX(100%);
     display: flex;
+  }
+
+  .nav-link-wrapper.open {
+    transform: translateX(0);
+  }
+
+  .close-nav-btn {
+    display: block;
+    text-align: right;
+    font-size: 30px;
+    font-weight: bold;
+  }
+
+  .nav-links-middle ul,
+  .nav-links-end ul {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 90vh;
-    padding: 30px;
-    /* animations stuff */
-    animation: welcomeMessage linear 0.5s ;
-    
+  }
+
+  .login-dashboard,
+  .signup-logout {
+    background: gray;
+    width: 110px;
+  }
+
+  .nav-links-middle li,
+  .nav-links-end li {
+    margin: 1rem 0;
+  }
+
+  .nav-link-wrapper > div {
+    width: 100%;
+  }
+
+  body.nav-open {
+    overflow: hidden;
+  }
 }
 
-
-.home-text-header
-{
-    font-size: 35px;
-    font-weight: 400;
-}
-
-.learn-more-link
-{
-    transition: 0.2s ease-in-out;
-    
-    
-}
-
-.learn-more-link:hover
-{
-
-    filter: drop-shadow(20px 20px 30px rgb(91, 66, 255));
-}
-
-.learn-more-link a
-{ 
-    color: rgb(135, 135, 135);
-    font-weight: 500;
-    
-}
-
-/* mobile section */
-
-.nav-link-wrapper
-{
+@media (max-width: 768px) {
+  .home-nav-bar {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    width: 40%;
+  }
+
+  .nav-link-wrapper {
+    width: 200px;
+  }
+
+  .nav-link-wrapper a {
+    font-size: 13px;
+  }
+
+  .home-message h2 {
+    font-size: 20px;
+    font-weight: bold;
+  }
+
+  .home-message p,
+  .home-message a {
+    font-size: 12px;
+  }
+
+  .logo-x-name a h2 {
+    font-size: 20px;
+  }
+
+  .burger {
+    font-size: 20px;
+  }
 }
 
-.burger
-{
-    display: none;
-}
-
-.close-nav-btn
-{
-    display: none;
-}
-
-/* media queries */
-
-
-/* animations */
-
-
-@keyframes welcomeMessage
-{
-    0% {
-        height: 40vh;       
-    }
-
-    20%
-    {
-        height: 50vh;
-    }
-    40%
-    {
-        height: 60vh;
-    }
-    60%
-    {   
-        height: 70vh;
-    }
-    80%
-    {
-        height: 80vh;
-    }
-    100%
-    {
-        height: 90vh;
-    }
+@keyframes welcomeMessage {
+  0% { height: 40vh; }
+  20% { height: 50vh; }
+  40% { height: 60vh; }
+  60% { height: 70vh; }
+  80% { height: 80vh; }
+  100% { height: 90vh; }
 }

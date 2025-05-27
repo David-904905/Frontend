@@ -20,12 +20,12 @@ const Login = () => {
 
   const handleSubmit = (e: any) => {
     e.preventDefault();
-    console.log(email, password)
-  }
+    console.log(email, password);
+  };
   return (
     <>
+      <HomeNav />
       <div className="login-container">
-        <HomeNav />
         <div className="login-body-container">
           <div className="login-body">
             <div className="login-message">

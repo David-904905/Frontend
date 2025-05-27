@@ -28,27 +28,27 @@ const HomeNav = () => {
           <h2>Ufune Nwed</h2>
         </NavLink>
       </div>
-      <div className="burger">
+      <div className={menuOpen ? "hideme" : "burger"} onClick={() => setMenuOpen(true)}>
         <GiHamburgerMenu />
       </div>
-      <div className="nav-link-wrapper">
+      <div className={`nav-link-wrapper ${menuOpen ? "open" : ""}`}>
+        <div className="close-nav-btn" onClick={() => setMenuOpen(false)}>
+          <IoClose />
+        </div>
         <div className="nav-links-middle">
           <ul>
             <li>
-              <NavLink to={"/"}>About</NavLink>
+              <NavLink to={"/"} onClick={() => setMenuOpen(false)}>About</NavLink>
             </li>
             <li>
-              <NavLink to={"/"}>Contact Us</NavLink>
+              <NavLink to={"/"} onClick={() => setMenuOpen(false)}>Contact Us</NavLink>
             </li>
             <li>
-              <NavLink to={"/"}>Contribute</NavLink>
+              <NavLink to={"/"} onClick={() => setMenuOpen(false)}>Contribute</NavLink>
             </li>
           </ul>
         </div>
         <div className="nav-links-end">
-          <div className="close-nav-btn">
-            <IoClose />
-          </div>
           <ul>
             <li>
               <div className="login-dashboard">
