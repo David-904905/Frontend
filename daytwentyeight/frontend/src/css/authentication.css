@@ -31,8 +31,8 @@
 
 .login-body {
   background: var(--text-color);
-  height: 600px;
-  width: 400px;
+  height: fit-content;
+  width: 500px;
   border-radius: 10px;
 }
 
@@ -140,26 +140,206 @@
   margin-left: 0px;
 }
 
+/* sign in section */
+.signup-parent-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url("/background/backgroundimage2.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  overflow: hidden;
+  z-index: 0;
+  position: relative;
+}
+
+.signup-parent-container::before
+{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 1;
+}
+
+.signin-container {
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+  background: var(--text-color);
+  color: var(--bg-color);
+  padding: 10px;
+  border-radius: 5px;
+  z-index: 2;
+  position: relative;
+}
+
+.signup-intro {
+  padding: 30px;
+}
+
+/* @media (max-width: 1280px) {
+  .signin-container
+  {
+    margin-top: 200px;
+  }
+} */
+
 @media (max-width: 768px) {
   .login-body {
-    width: 90%;
+    width: 50%;
     font-size: 15px;
+  }
+  .signin-container {
+    width: 70%;
+    font-size: 12px;
+    margin-top: 40px;
+    padding: 0;
+  }
+}
+
+@media (max-width: 545px) {
+  .login-container
+  {
+    overflow: scroll;
+    font-size: 12px;
+  }
+  .login-body
+  {
+    margin-top: 200px;
+    margin-bottom: 120px;
+    width: 70%;
+    font-size: 12px;
   }
 }
 
 @media (max-width: 460px) {
-  .login-body
-  {
+  .login-body {
     width: 70%;
     font-size: 12px;
   }
-  .login-message h2
-  {
+
+  .login-message h2 {
     font-size: 20px;
   }
-  .show-password-btn
-  {
+  .show-password-btn {
     margin-left: 10px;
     margin-right: 12px;
+  }
+}
+
+/* @media (max-height: 885px)
+{
+  .signup-parent-container
+  {
+    height: 100vh;
+  }
+} */
+
+@media (max-width: 375px) {
+  .signup-parent-container
+  {
+    overflow: scroll;
+  }
+  .signin-container
+  {
+    
+    margin-bottom: 30px;
+    width: 70%;
+    height: auto;
+  }
+
+  .forms-section input
+  {
+    padding: 5px;
+  }
+}
+
+
+@media (max-height: 670px)
+{
+  .signup-parent-container
+  {
+    padding-top: 40px;
+    
+  }
+}
+
+@media (orientation: landscape) and (max-height: 420px)
+{
+  .signin-container
+  {
+    margin-top: 50px;
+  }
+  .login-body
+  {
+    margin-top: 10px;
+  }
+}
+
+
+
+@media (orientation: landscape) and (max-height: 450px) {
+  .signup-parent-container {
+    height: auto;
+    padding-top: 50px;
+  }
+  .signin-container
+  {
+    width: 50%;
+  }
+  .login-body
+  {
+    
+    width: 55%;
+
+  }
+  .login-body-container
+  {
+    margin-top: 100px;
+    padding-bottom: 70px;
+  }
+}
+
+/* for landscape orientation and stuff like that */
+@media (orientation: landscape) and (max-height: 650px) {
+  .signup-parent-container {
+    height: auto;
+    padding-top: 100px;
+    padding-bottom: 40px;
+  }
+  .signin-container
+  {
+    margin-top: 50px;
+  }
+  .login-container
+  {
+    padding-top: 80px;
+    padding-bottom: 5px;
+    overflow: scroll;
+  }
+  .login-body
+  {
+    margin-top: 200px;
+    margin-bottom: 100px;
+  }
+  .signin-container
+  {
+    width: 40%;
+  }
+  .login-body-container
+  {
+    padding-bottom: 70px;
+  }
+}
+
+@media (orientation: landscape) and (max-height: 800px) {
+  .signup-parent-container
+  {
+    padding-top: 50px;
   }
 }

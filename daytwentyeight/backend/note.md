@@ -475,3 +475,52 @@ or
 pip install "pydantic[email]"
 
 ```
+
+
+
+        min_count = 0
+        max_count = 0
+
+        for i in range(len(nums)):
+            if nums[i] == min_int:
+                min_count += 1
+            elif nums[i] == max_int:
+                max_count += 1
+        if min_count == 2 or max_count == 2:
+            return 'isosceles'
+
+        else:
+            return 'none'
+
+
+import math
+
+def scalene_or_none(min_int, max_int, mid_no):
+    for i in range(1, mid_no):
+        if mid_no - i == 0:
+            return 0
+        min_int += 1
+        if min_int == max_int:
+            break
+    if min_int == max_int:
+        return 1
+
+class Solution:
+    def triangleType(self, nums: List[int]) -> str:
+        if sum(nums) / len(nums) == nums[0]:
+            return 'equilateral'
+
+        nums = sorted(nums)
+
+        max_int = max(nums)
+        min_int = min(nums)
+        mid_no = nums[1]
+
+        if scalene_or_none(min_int, max_int, mid_no) == 0:
+            return 'none'
+        elif scalene_or_none(min_int, max_int, mid_no) == 1:
+            return 'scalene'
+        return 'isosceles '
+
+
+3024
