@@ -7,6 +7,7 @@ import { AuthContext } from '@contexts/AuthContext'
 import Sidebar from './common/Sidebar'
 // css
 import './App.css'
+import MobileNavBar from '@common/MobileNavBar'
 
 const App = () => {
   const context = useContext(AuthContext);
@@ -18,6 +19,7 @@ const App = () => {
   return (
     <> 
       {loginStatus && !isHome && <Sidebar />}
+      {loginStatus && !isHome && <MobileNavBar />}
       <div className="outlet-container">
         <Outlet />
       </div>

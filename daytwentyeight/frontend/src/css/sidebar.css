@@ -1,6 +1,8 @@
+@import "@css/css-variables/variable.css";
+
 .sidebar
 {
-    background: black;
+    background: var(--text-color);
     color: white;
     width: 150px;
     position: fixed;
@@ -76,3 +78,9 @@
 
 
 
+/* @media (max-width: 768px) {
+    .sidebar
+    {
+        position: relative;
+    }
+} */

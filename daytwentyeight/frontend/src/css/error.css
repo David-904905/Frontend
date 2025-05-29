@@ -1,12 +1,47 @@
-.notfound-container
-{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+.notfound-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
-.notfound-message h2
-{
-    font-size: 70px;
+.notfound-message h2 {
+  font-size: 70px;
+}
+
+@media (max-width: 768px) {
+  .notfound-container {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .notfound-img img {
+    height: 400px;
+  }
+  .notfound-message {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 365px) {
+  .notfound-message {
+    margin-left: 20px;
+  }
+  .notfound-message h2
+  {
+    font-size: 60px;
+  }
+}
+
+@media (orientation: landscape) and (max-height: 600px) {
+  .notfound-container {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .notfound-img img {
+    height: 200px;
+  }
+  .notfound-message {
+    margin-top: 70px;
+    font-size: 15px;
+  }
 }

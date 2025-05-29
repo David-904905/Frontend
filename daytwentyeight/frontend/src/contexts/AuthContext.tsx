@@ -37,7 +37,7 @@ export const AuthContext = createContext<AuthContextDependency | undefined>(
 );
 
 export const AuthProvider = ({ children }: ChildrenType) => {
-  const [loginStatus, setLoginStatus] = useState<boolean>(false);
+  const [loginStatus, setLoginStatus] = useState<boolean>(true);
   const [loginError, setLoginError] = useState<string | null>(null);
   const [signUpError, setSignUpError] = useState<string | null>(null);
   const [isHome, setIsHome] = useState<boolean>(true);

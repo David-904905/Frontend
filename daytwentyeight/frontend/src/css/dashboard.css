@@ -1,3 +1,5 @@
+@import "@css/css-variables/variable.css";
+
 .dashboard-container
 {
     margin-left: 200px;
@@ -5,6 +7,7 @@
     flex-direction: column;
     justify-content: space-between;
     height: 100vh;
+    color: var(--text-color);
 }
 
 .dashboard-sub-container{
@@ -194,6 +197,41 @@
     .other-tile
     {
         margin-right: 40px;
+    }
+
+}
+
+
+@media (max-width: 768px)
+{
+    .dashboard-container
+    {
+        margin-left: 0;
+        padding: 30px;
+        font-size: 12px;
+        padding-top: 90px;
+    }
+
+    .quote-and-stats
+    {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .other-tile
+    {
+        display: none;
+    }
+
+    .groups
+    {
+        width: 100%;
+        padding: 0;
+        margin-top: 20px;
+    }
+    .groups-and-group-chat
+    {
+        padding: 10px;
     }
 
 }
