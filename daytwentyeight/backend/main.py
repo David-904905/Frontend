@@ -216,7 +216,7 @@ async def filter_item(
 
 @app.get("/api/v1/today-quote/")
 async def get_daily_quote():
-    request = await requests.get('https://zenquotes.io/api/today')
+    request = requests.get('https://zenquotes.io/api/today')
     if request:
         data = request.json()
         cleaned_data: dict = data[0]

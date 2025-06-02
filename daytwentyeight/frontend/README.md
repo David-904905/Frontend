@@ -104,3 +104,6 @@ npm i react-beautifyl-dnd
 - Build a chrome extension. Project
 
 - I stoppedat 14:06:29
+
+
+- college friendly
