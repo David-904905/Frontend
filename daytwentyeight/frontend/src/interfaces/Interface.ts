@@ -25,3 +25,11 @@ export interface DailyQuote
     h: string,
     id: number,
 }
+
+
+export interface ContactUsPayload
+{
+    name: string,
+    email: string,
+    message: string,
+}

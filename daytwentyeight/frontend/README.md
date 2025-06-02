@@ -102,3 +102,5 @@ npm i react-beautifyl-dnd
 - Find a way so you can open a browser window inside the application so the user can perform research, or choose an AI model that was built for research and answering questions.
 
 - Build a chrome extension. Project
+
+- I stoppedat 14:06:29

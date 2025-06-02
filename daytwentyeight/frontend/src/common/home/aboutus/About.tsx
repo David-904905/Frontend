@@ -1,9 +1,11 @@
 import "@css/aboutus.css";
+import { useMenuOpen } from "@hooks/useMenuOpen";
 
 const About = () => {
+  const {setMenuOpen} = useMenuOpen()
   return (
     <>
-      <div className="about-us-container" id="about-us">
+      <section className="about-us-container" id="about-us" onClick={() => setMenuOpen(false)} >
         <div className="about-us-header">
           <h2>About Us</h2>
         </div>
@@ -27,7 +29,7 @@ const About = () => {
           </div>
         </div>
 
-      </div>
+      </section>
     </>
   );
 };

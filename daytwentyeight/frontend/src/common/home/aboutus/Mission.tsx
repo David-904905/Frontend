@@ -1,8 +1,10 @@
 import "@css/aboutus.css";
+import { useMenuOpen } from "@hooks/useMenuOpen";
 
 const Mission = () => {
+  const {setMenuOpen} = useMenuOpen()
   return (
-    <div className="mission-statement-container" id="mission-statement">
+    <section className="mission-statement-container" id="mission-statement" onClick={() => setMenuOpen(false)}>
       <div className="mission-statement">
         <div className="mission-statement-header">
           <h2>Mission Statement</h2>
@@ -27,7 +29,7 @@ const Mission = () => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

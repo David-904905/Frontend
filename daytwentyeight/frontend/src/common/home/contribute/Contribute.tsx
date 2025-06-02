@@ -1,9 +1,11 @@
 import "@css/contribute.css";
+import { useMenuOpen } from "@hooks/useMenuOpen";
 
 const Contribute = () => {
+  const {setMenuOpen} = useMenuOpen()
   return (
-    <div id="contribute">
-      <div className="contribute-header">Contribute</div>
+    <section id="contribute" className="contribute" onClick={() => setMenuOpen(false)}>
+      <div className="contribute-header"><h2>Contribute</h2></div>
       <div className="how-to-contribute">
         <div className="brief-message">
           <p>
@@ -17,18 +19,18 @@ const Contribute = () => {
         </div>
         <div className="contribution-steps">
           <ul>
-            <li>1. Clone the repository</li>
-            <li>2. Create a branch</li>
-            <li>3. Make the necessary changes</li>
-            <li>4. In a file called changes.txt, describe the changes you have made</li>
-            <li>5. Push the changes to that branch</li>
-            <li>6. Submit a pull request</li>
+            <li>Clone the repository</li>
+            <li>Create a branch</li>
+            <li>Make the necessary changes</li>
+            <li>In a file called changes.txt, describe the changes you have made</li>
+            <li>Push the changes to that branch</li>
+            <li>Submit a pull request</li>
           </ul>
           <p>If your request has been accepted, your changes will be incooperated.</p>
         </div>
       </div>
       <div className="links"></div>
-    </div>
+    </section>
   );
 };
 

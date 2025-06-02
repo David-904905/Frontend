@@ -1,0 +1,59 @@
+.contact-us-container
+{
+    height: auto;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    color: var(--bg-color);
+    background: var(--text-color);
+
+}
+
+.contact-us-brief-message p
+{
+    padding: 20px 0 40px 0;
+}
+
+.contact-is-form input
+{
+    width: 300px;
+    padding: 10px;
+    margin: 5px;
+
+}
+
+.contact-is-form textarea
+{
+    width: 300px;
+    margin: 10px 5px 5px 5px;
+    padding: 5px;
+}
+
+
+.contact-is-form button
+{
+    padding: 10px 40px 10px 40px;
+    color: white;
+    background: black;
+    border: none;
+    margin: 5px;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    transition: 0.2s ease-in-out;
+}
+
+
+.contact-is-form button:hover
+{
+    background: gray;
+}
+
+
+@media (max-width: 768px)
+{
+    .contact-is-form textarea, .contact-is-form input
+    {
+        width: 50%;
+    }
+}

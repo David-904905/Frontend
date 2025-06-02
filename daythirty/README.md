@@ -44,3 +44,10 @@ const addTodo = text => {
 
 - A reducer is a function that receives the current state and an action object, decides how to update the state if necessary, and returns the new state: (state, action) => newState. 
 
+## Creating Modals
+
+- make use of states to control whether a modal is open or closed.
+
+## In the shadow of your wings
+
+- In the shadow of his wings, I know I am saved, in the shadow of his wings, I find relieve, cause you will hold me and you watch me, in your righteousness, I find rest, peace of mind, in the shadow of your wings.

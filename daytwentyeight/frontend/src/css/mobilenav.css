@@ -48,4 +48,8 @@
     align-items: center;
     justify-content: space-between;
   }
+  .links-section p
+  {
+    font-size: 12px;
+  }
 }

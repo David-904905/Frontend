@@ -13,6 +13,7 @@ from pydantic import AfterValidator
 import random
 
 # utils
+from models.payloads import ContactUs
 from utils.validators.movie_bk_validator import check_valid_id
 
 # database section
@@ -237,3 +238,10 @@ async def update_profile_picture(uuid: str, image_url: str) -> JSONResponse:
         Http Response
     """
     ...
+
+# contact us message route
+
+@app.post("/api/v1/contact-us/")
+async def contact_us(payload: ContactUs):
+    print(payload)
+    return {"message": "successful"}

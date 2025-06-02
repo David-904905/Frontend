@@ -1,10 +1,12 @@
 import "@css/home.css";
+import { useMenuOpen } from "@hooks/useMenuOpen";
 import { NavLink } from "react-router-dom";
 
 
 const HomeMessage = () => {
+  const {setMenuOpen} = useMenuOpen()
   return (
-    <div className="home-main-container">
+    <section className="home-main-container" onClick={() => setMenuOpen(false)}>
       <div className="home-message">
         <h2 className="home-text-header">Welcome to ufune nwed</h2>
         <p className="home-text-first">
@@ -14,7 +16,7 @@ const HomeMessage = () => {
           <NavLink to={"/about-us"}>Learn more?</NavLink>
         </span>
       </div>
-    </div>
+    </section>
   );
 };
 

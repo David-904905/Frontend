@@ -6,19 +6,20 @@ import { NavLink } from "react-router-dom";
 // context
 
 import { AuthContext } from "@contexts/AuthContext";
-import { useContext, useState } from "react";
+import { useContext } from "react";
 
 // icons
 import { GiHamburgerMenu } from "react-icons/gi";
 import { IoClose } from "react-icons/io5";
+// import { MenuOpenContext } from "@contexts/NavBarContext";
+import { useMenuOpen } from "@hooks/useMenuOpen";
 
 const HomeNav = () => {
   const context = useContext(AuthContext);
-  const [menuOpen, setMenuOpen] = useState<boolean>(false);
   if (!context) {
     return;
   }
-
+  const {menuOpen, setMenuOpen} = useMenuOpen();
   const { loginStatus } = context;
 
   return (
