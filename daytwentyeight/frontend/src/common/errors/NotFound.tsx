@@ -3,10 +3,12 @@ import "@css/error.css"
 import { useContext, useEffect } from "react"
 
 import { AuthContext } from "@contexts/AuthContext"
+import { useMenuOpen } from "@hooks/useMenuOpen"
 
 
 const NotFound = () => {
     const context = useContext(AuthContext);
+    const {setMenuOpen} = useMenuOpen();
     if (!context)
     {
         return;
@@ -18,7 +20,7 @@ const NotFound = () => {
   return (
     <>  
         <HomeNav />
-        <div className="notfound-container">
+        <div className="notfound-container" onClick={() => setMenuOpen(false)}>
             <div className="notfound-img">
                 <img src="/background/notfoundone.png" alt="not-found-img" />
             </div>

@@ -113,3 +113,106 @@
     margin-left: 45%;
   }
 }
+
+@media (max-width: 927px)
+{
+  .other-section
+  {
+    margin-left: 150px;
+    margin-right: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .profile-dashboard
+  {
+    padding-left: 0;
+
+  }
+  .other-section
+  {
+    margin-left: 0;
+    margin-right: 5px;
+  }
+  .profile-image-container
+  {
+    margin-left: 0;
+    padding: 30px;
+  }
+  .cover-image
+  {
+    margin-top: 89px;
+    position: unset;
+  }
+  .camera-icon-container
+  {
+    position: unset;
+    display: flex;
+    justify-content: right;
+    padding: 0;
+  }
+  .skills-and-other-info
+  {
+    gap: 2rem;
+    margin-left: 20px;
+  }
+}
+
+
+
+@media (orientation: landscape) and (max-height: 900px) {
+  .profile-image-container
+  {
+    margin-left: 0;
+    padding: 40px;
+  }
+  .other-section
+  {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+  .cover-image
+  {
+    margin-top: 89px;
+    position: unset;
+  }
+  .camera-icon-container
+  {
+    position: inherit;
+    display: flex;
+    justify-content: right;
+    padding: 0;
+  }
+  .profile-container
+  {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+
+@media (orientation: landscape) and (max-height: 375px)
+{
+  .other-section
+  {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+}
+
+@media (orientation: landscape) and (max-width: 720px)
+{
+  .other-section
+  {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+}
+
+/* @media (orientation: landscape) and (max-width: 768px) 
+{
+  .other-section
+  {
+    margin-left: 0px;
+  }
+} */

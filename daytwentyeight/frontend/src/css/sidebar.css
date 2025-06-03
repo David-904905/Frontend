@@ -78,9 +78,9 @@
 
 
 
-/* @media (max-width: 768px) {
+@media (orientation: landscape) and (max-height: 900px) {
     .sidebar
     {
-        position: relative;
+        display: none;
     }
-} */
+}

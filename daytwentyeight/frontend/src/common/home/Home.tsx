@@ -10,7 +10,6 @@ import Contact from "./contactus/Contact";
 import Mission from "./aboutus/Mission";
 
 // contexts
-import { MenuOpenProvider } from "@contexts/NavBarContext";
 
 const Home = () => {
   const context = useContext(AuthContext);
@@ -25,14 +24,12 @@ const Home = () => {
   }, []);
   return (
     <>
-      <MenuOpenProvider>
-        <HomeNav />
-        <HomeMessage />
-        <About />
-        <Mission />
-        <Contribute />
-        <Contact />
-      </MenuOpenProvider>
+      <HomeNav />
+      <HomeMessage />
+      <About />
+      <Mission />
+      <Contribute />
+      <Contact />
     </>
   );
 };
