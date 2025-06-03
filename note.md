@@ -70,3 +70,12 @@
     useEffect(() => {
         // your logic here;
     });
+
+
+# leet copy
+class Solution:
+    def maxCandies(self, status: List[int], candies: List[int], keys: List[List[int]], containedBoxes: List[List[int]], initialBoxes: List[int]) -> int:
+        # loop over the contained boxes, the outer loop
+        # loop over containedBoxes[i]
+        # can I just loop over the keys? then set their corresponding status index to 1, if it is zero already, then loop over status, if it is set to 1, add the corresponding candy weight to an array. so a key exists for each index i, so this approach will not work, so if during a loop, an index i in closed, we go to keys i, if keys i contains a key to open a previous index or a closed index, we move to that point and grab the candy.
+        # implement me later.
