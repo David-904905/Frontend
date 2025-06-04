@@ -1,48 +1,33 @@
-# Getting Started with Create React App
+# Framer Motion
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+- Framer Motion is a React JS library for animations and transitions.
 
-npx create-react-app --template typescript
+- Framer motion supports drag, gestures, and layout animations, which can be hard to achieve with pure CSS.
 
-## Available Scripts
+## Writing your first animation
 
-In the project directory, you can run:
+- First you need to import motion from framer-motion
 
-### `npm start`
+``` JavaScript
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+import {motion} from 'framer-motion';
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+```
 
-### `npm test`
+- Motion is an object that provides a set of components and hooks for creating animations and transitions in React applications.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- When we use <motion.element> we're indicating that we want to animate that specific <element>. Framer motion then provides additional props and features to facilitate those animations, such as initial, animate, and exit, allowing for more powerful and customizable animations.
 
-### `npm run build`
+- The initial prop is used to define the initial state of an animated component before it enters the DOM, it specify's how the element should appear when it first renders.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- The animate prop, this prop is used to create animations for a component. It lets you set target values for different CSS properties, making it easy to have smooth changes when the component's state updates.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- The exit prop is used to define the animation that occurs when a component is removed from the React tree. This is useful when creating transitions in which elements are unmounted/removed, enhancing the user experience by visually indicating that something has disappeared.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- Transformations allow you to change the shape, size, and position of elements on a webpage.
 
-### `npm run eject`
+- 
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## npx create-react-app --template typescript
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).

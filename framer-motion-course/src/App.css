@@ -1,0 +1,53 @@
+body
+{
+  background: black;
+  color: white;
+}
+
+.App
+{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.animation-container
+{
+  height: 300px;
+  width: 300px;
+  border-radius: 30%;
+  border: 0;
+  background: crimson;
+}
+
+.hero-btn
+{
+  height: 50px;
+  width: 100px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  background: gray;
+}
+
+.toggle-visibility
+{
+  height: 200px;
+  width: 200px;
+  background: teal;
+  border: none;
+  border-radius: 30%;
+  margin: 20px;
+}
+
+.toggle-visibility-button
+{
+  padding: 20px;
+  width: 100px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  background: gray;
+}
