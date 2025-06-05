@@ -1,0 +1,132 @@
+@import "@css/css-variables/variable.css";
+
+.settings-main-container
+{
+    margin-left: 200px;
+}
+
+.settings-head
+{
+    padding: 30px 30px 30px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.search-notify-pic
+{
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.welcome-and-date h2
+{
+    margin-bottom: 20px;
+}
+
+.settings-search-bar
+{
+    padding: 10px;
+    height: 54px;
+    width: 300px;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    border-radius: 9px;
+    background: white;
+}
+
+.settings-search-bar input
+{
+    width: 100%;
+    padding: 10px;
+    border: none;
+    outline-color: var(--accent-color);
+    
+}
+
+.settings-search-icon
+{
+    font-size: 30px;
+}
+
+.notification-icon-container
+{
+    height: 50px;
+    width: 50px;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    border-radius: 5px;
+
+}
+
+.settings-profile-image img
+{
+    height: 50px;
+    width: 50px;
+    border-radius: 5px;
+}
+
+/* settings body */
+
+.settings-body
+{
+    padding: 0;
+    width: 97%;
+    border-radius: 10px;
+    height: auto;
+    box-shadow: 0px 2px 2px 2px rgb(216, 216, 216);
+
+}
+
+.color-stuff
+{
+    background: linear-gradient( 240deg, var(--accent-color), var(--button-color)) ;
+    padding: 50px;
+    width: 100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+/* settings profile component with name and email */
+
+.settings-profile-section
+{
+    padding: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sett-profile-img-details
+{
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.sett-profile-image
+{
+    height: 100px;
+    width: 100px;
+    background: gray;
+    border-radius: 50%;
+}
+
+.sett-profile-img-details img
+{
+    border-radius: 50%;
+}
+
+.sett-profile-button button
+{
+    width: 90px;
+    height: 40px;
+    color: white;
+    border-radius: 5px;
+    border: none;
+    background: var(--accent-color);
+}

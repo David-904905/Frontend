@@ -1,18 +1,14 @@
 import "@css/profile.css";
 import { useContext, useEffect, useState } from "react";
-import { UserContext } from "../../../contexts/UserDetails";
-
 // components
 
 // icons
 import { FaCamera } from "react-icons/fa";
 import { AuthContext } from "@contexts/AuthContext";
+import { useUserDetails } from "@hooks/useUserDetails";
 
 const Profile = () => {
-  const context = useContext(UserContext);
-  if (!context) {
-    return;
-  }
+  const context = useUserDetails();
   const { name, setName, bio, setBio } = context;
 
   const [coverImage, setCoverImage] = useState<string>(

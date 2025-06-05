@@ -107,3 +107,42 @@ npm i react-beautifyl-dnd
 
 
 - college friendly
+
+# implement settings stuff
+
+- loop through the values of a hashmap, match the value with that of the hashmap, if you have medium to exact match, return the value, then the value with the closest match, will be a url to that component, then that url will be displayed in the dropdown that occurs when the user clicks enter on the search, but display the url as cards, not just as a text, then when the user clicks on that url, it navigates them to that component.
+
+- Is this the optimal way to do this? or is there a more efficient way to do this.
+
+- For the dashboard stuff and home page, we can implement it in such a way that after logging in, a token is stored in the local storage, then the login status is changed, then we can have a useeffect that fires when the logins status changes, that useeffect will then trigger a function that fetches the user details, and caches them in the localstorage, and then that cached data will be used to update the value in the ui, without causing a full on page reload.
+
+
+# Notes
+
+- The rivers of living water is the holy spirit, that is what Jesus was refering to. It can be found in the book of John Chapter 7.
+
+- A prophet does not come out of galilee, was that a sterotype.
+
+- Anyone who does not enter by the gate is a theif and a robber, but one who enters throug the gate is the shepherd, does this mean that there is another way into the kingdom of God? 
+
+- Thomas was also known as Didimus.
+
+- If you believe, you will see the glory of God.
+
+- The one who believes in me will live even though they die, and whoever lives by believing in me will never die. John Chapter 11.
+
+- You will always have the poor around you, but you will not always have me. John 12
+
+- The above statement was made when mary used her hair and an expensive oil to wipe Jesus foot, and Judas Iscariot the betrayer argued that the oil could have been sold for loads of money and that money given to the poor. Judas kept the money of Jesus ministry, he was the tresurer, and helped himself to it. Where did that money come from? donations? offering? I dont think it is offering as I have not seen anywhere in the Holy Bible where it says that The LORD and Saviour Jesus Christ collected offering.
+
+- Unless a grain of wheat falls to the ground and dies, it remains only but a single seed, but if it dies, it produces many seeds. John Chapter 12.
+
+- Anyone who loves their life will loose it, and anyone who hates their life in this world will keep it for eternal life. What did the father mean by this, did he know something, did he know that if you give your life for something you really love, you will set an example that people will continue to look up to. Father forgive me if I do wrong in comparing you to worldly examples. Look at people in the world, who made an impact, that died standing for their goals, they continue to live on till now, as opposed to others who chose self preservation over self sacrifice. Again, what did the father mean by this.
+
+- He knew that he will die, yet he was not afraid, the father was never afraid, neither of what people will say or what they will do, when he knew something was right, he always did it, no matter what. Look at healing on the sabbath, he healed regardless of what the people might say.
+
+- Be like the father, have confidence in the father. Believe in yourself, that is all there is to life.
+
+- Look at the people in the Holy Bible who believed in the father, but were scared to express themselves for fear of what mere men might say, they chose praise from men rather than that exalting the Father, relate this in your own life, never live like those people do, dont seek to please any man, dont take on endeavours to please mere men, rather in everything you do, seek to be yourself, and above all please the Father. Reflections on John Chapter 12.
+
+- The one who sees me is seeing the one who sent me.

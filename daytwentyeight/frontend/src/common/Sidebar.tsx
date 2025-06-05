@@ -33,7 +33,7 @@ const Sidebar = () => {
       <div className="links-section">
             <ul className="top-utilities-link">
                 <li className="top-links-item"><NavLink to={'/user/profile'}><FaUserAlt /></NavLink><p>Profile</p></li>
-                <li className="top-links-item"><NavLink to={'/'}><IoSettingsSharp /></NavLink><p>Settings</p></li>
+                <li className="top-links-item"><NavLink to={'/user/settings'}><IoSettingsSharp /></NavLink><p>Settings</p></li>
             </ul>
         </div>
     </aside>

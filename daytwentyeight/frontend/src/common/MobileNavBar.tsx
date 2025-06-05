@@ -89,7 +89,7 @@ const MobileNavBar = () => {
               <p>Profile</p>
             </li>
             <li className="top-links-item">
-              <NavLink to={"/"}>
+              <NavLink to={"/user/settings"}>
                 <IoSettingsSharp />
               </NavLink>
               <p>Settings</p>

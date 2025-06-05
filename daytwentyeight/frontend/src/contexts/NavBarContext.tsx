@@ -1,16 +1,8 @@
-import { useState, createContext, type SetStateAction } from "react";
+import type { Children, NavBarStruct } from "@interfaces/Interface";
+import { useState, createContext } from "react";
 
 
-interface NavBarStruct
-{
-    menuOpen: boolean
-    setMenuOpen: React.Dispatch<SetStateAction<boolean>>
-}
 
-interface Children
-{
-    children: React.ReactNode
-}
 
 export const MenuOpenContext = createContext<NavBarStruct | null>(null);
 

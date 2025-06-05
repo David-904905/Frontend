@@ -1,9 +1,10 @@
 import { createRoot } from "react-dom/client";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
-// contexts
+// context providers
 import { UserDetailsProvider } from "@contexts/UserDetails.tsx";
 import { AuthProvider } from "@contexts/AuthContext.tsx";
+import SettingsContextProvider from "@contexts/SettingsContext.tsx";
 
 // components
 import App from "./App.tsx";
@@ -18,23 +19,25 @@ import NotFound from "@common/errors/NotFound.tsx";
 createRoot(document.getElementById("root")!).render(
   <AuthProvider>
     <UserDetailsProvider>
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<App />}>
-            <Route index element={<Home />} />
-            <Route path="user">
-              <Route index path="profile" element={<Profile />} />
-              <Route path="dashboard" element={<DashBoard />} />
-              <Route path="settings" element={<Settings />} />
+      <SettingsContextProvider>
+        <BrowserRouter>
+          <Routes>
+            <Route path="/" element={<App />}>
+              <Route index element={<Home />} />
+              <Route path="user">
+                <Route index path="profile" element={<Profile />} />
+                <Route path="dashboard" element={<DashBoard />} />
+                <Route path="settings" element={<Settings />} />
+              </Route>
+              <Route path="auth">
+                <Route index element={<SignUp />} path="sign-up" />
+                <Route path="login" element={<Login />} />
+              </Route>
+              <Route path="*" element={<NotFound />} />
             </Route>
-            <Route path="auth">
-              <Route index element={<SignUp />} path="sign-up" />
-              <Route path="login" element={<Login />} />
-            </Route>
-            <Route path="*" element={<NotFound />}/>
-          </Route>
-        </Routes>
-      </BrowserRouter>
+          </Routes>
+        </BrowserRouter>
+      </SettingsContextProvider>
     </UserDetailsProvider>
   </AuthProvider>
 );

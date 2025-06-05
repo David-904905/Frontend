@@ -1,42 +1,17 @@
-import { createContext, useState, type SetStateAction } from "react";
+import { createContext, useState } from "react";
 import axios from "axios";
+import type { AuthContextDependency, Children, LoginPayLoad, SignUpPayLoad } from "@interfaces/Interface";
 
 // types
 
-interface SignUpPayLoad {
-  firstname: string;
-  lastname: string;
-  username: string | null;
-  email: string;
-  dateofbirth: Date;
-  password: string;
-}
 
-interface LoginPayLoad {
-  email: string;
-  password: string;
-}
 
-interface AuthContextDependency {
-  loginStatus: boolean;
-  loginError: string | null;
-  signUpError: string | null;
-  isHome: boolean;
-  setIsHome: React.Dispatch<SetStateAction<boolean>>;
-  Login: (token: LoginPayLoad) => Promise<void>;
-  SignUp: (payload: SignUpPayLoad) => Promise<void>;
-  Logout: () => void;
-}
-
-interface ChildrenType {
-  children: React.ReactNode;
-}
 
 export const AuthContext = createContext<AuthContextDependency | undefined>(
   undefined
 );
 
-export const AuthProvider = ({ children }: ChildrenType) => {
+export const AuthProvider = ({ children }: Children) => {
   const [loginStatus, setLoginStatus] = useState<boolean>(true);
   const [loginError, setLoginError] = useState<string | null>(null);
   const [signUpError, setSignUpError] = useState<string | null>(null);
