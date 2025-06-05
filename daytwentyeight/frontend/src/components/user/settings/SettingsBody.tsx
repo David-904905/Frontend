@@ -1,3 +1,5 @@
+import SettingsInputs from "./SettingsInputs";
+import SettingsMail from "./SettingsMail";
 import SettingsProfile from "./SettingsProfile";
 
 const SettingsBody = () => {
@@ -5,6 +7,8 @@ const SettingsBody = () => {
     <div className='settings-body'>
         <div className="color-stuff"></div>
         <SettingsProfile />
+        <SettingsInputs />
+        <SettingsMail />
     </div>
   )
 }

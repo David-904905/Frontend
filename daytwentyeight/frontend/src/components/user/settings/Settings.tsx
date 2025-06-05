@@ -20,6 +20,7 @@ const Settings = () => {
   return <div className="settings-main-container">
     <SettingsHead />
     <SettingsBody />
+    
   </div>;
 };
 

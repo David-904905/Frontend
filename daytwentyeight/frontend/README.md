@@ -146,3 +146,11 @@ npm i react-beautifyl-dnd
 - Look at the people in the Holy Bible who believed in the father, but were scared to express themselves for fear of what mere men might say, they chose praise from men rather than that exalting the Father, relate this in your own life, never live like those people do, dont seek to please any man, dont take on endeavours to please mere men, rather in everything you do, seek to be yourself, and above all please the Father. Reflections on John Chapter 12.
 
 - The one who sees me is seeing the one who sent me.
+
+- But this is to fufill this passage of scripture, John Chapter 13, the Father knew the scripture very well.
+
+- The disciple whom Jesus loved, which disciple was this?
+
+- As soon as Judas took the bread, satan entered into him. What does this mean?
+
+- John Chapter 14, do not let your hearts be troubled, you believe in God, believe in me also.
