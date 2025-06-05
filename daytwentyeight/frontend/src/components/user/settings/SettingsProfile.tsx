@@ -16,6 +16,7 @@ const SettingsProfile = () => {
         </div>
       </div>
       <div className="sett-profile-button">
+        {/* implement me as a modal */}
         <button>Edit</button>
       </div>
     </div>
