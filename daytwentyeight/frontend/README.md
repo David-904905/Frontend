@@ -154,3 +154,14 @@ npm i react-beautifyl-dnd
 - As soon as Judas took the bread, satan entered into him. What does this mean?
 
 - John Chapter 14, do not let your hearts be troubled, you believe in God, believe in me also.
+
+
+# Reflections on this mornings Bible Reading
+
+- Ezekiel 11:8 -> Ye have feared the sword, and I will bring a sword upon you, saith the LORD GOD.
+
+- What you fear the most will be used against you. What you fear will most likely come into fruition.
+
+- The fear of the LORD is the beginning of wisdom, if you fear the LORD, wisdom will come into fruition in your life.
+
+

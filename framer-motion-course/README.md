@@ -88,3 +88,8 @@ Caiaphas
 ```
 
 - 
+
+# Do zustand, implement your own version of toast in order to understand how it works
+
+- If Jesus was not the father of Joseph, that means Jesus was not from the genology of David.
+
