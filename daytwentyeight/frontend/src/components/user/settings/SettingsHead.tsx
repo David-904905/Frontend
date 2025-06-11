@@ -12,6 +12,7 @@ const SettingsHead = () => {
   const { profileImage } = useUserDetails();
 
   const { name } = useUserDetails();
+  
 
   useEffect(() => {
     console.log(searchValue);

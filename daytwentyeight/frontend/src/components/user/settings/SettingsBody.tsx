@@ -9,6 +9,7 @@ const SettingsBody = () => {
         <SettingsProfile />
         <SettingsInputs />
         <SettingsMail />
+        
     </div>
   )
 }

@@ -9,8 +9,10 @@ import Sidebar from "./common/Sidebar";
 import "./App.css";
 import MobileNavBar from "@common/MobileNavBar";
 import { MenuOpenProvider } from "@contexts/NavBarContext";
+import { useMenuOpen } from "@hooks/useMenuOpen";
 
 const App = () => {
+  const {setMenuOpen} = 
   const context = useContext(AuthContext);
   if (!context) {
     return;

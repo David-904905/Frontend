@@ -9,8 +9,14 @@ import useAuth from "@hooks/useAuth";
 // components
 import SettingsHead from "./SettingsHead";
 import SettingsBody from "./SettingsBody";
+import SettingsSearchModal from "./modals/SettingsSearchModal";
+import { useSettings } from "@hooks/useSettings";
+import SettingsEditModal from "./modals/SettingsEditModal";
 
 const Settings = () => {
+
+  const {showModal, showEditModal} = useSettings();
+  
   const { setIsHome } = useAuth();
 
   useEffect(() => {
@@ -20,6 +26,8 @@ const Settings = () => {
   return <div className="settings-main-container">
     <SettingsHead />
     <SettingsBody />
+    {showModal && <SettingsSearchModal />}
+    {showEditModal && <SettingsEditModal />}
     
   </div>;
 };

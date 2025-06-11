@@ -52,6 +52,10 @@ export interface SearchSetter {
 export interface SettingsContextPayload {
   searchValue: string;
   setSearchValue: React.Dispatch<SetStateAction<string>>;
+  showModal: boolean;
+  setShowModal: React.Dispatch<SetStateAction<boolean>>;
+  showEditModal: boolean;
+  setShowEditModal: React.Dispatch<SetStateAction<boolean>>;
 }
 
 export interface Children {
