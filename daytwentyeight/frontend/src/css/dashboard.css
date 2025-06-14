@@ -235,3 +235,13 @@
     }
 
 }
+
+
+@media (orientation: landscape) and (max-height: 450px)
+{
+    .dashboard-container
+    {
+        margin-left: 0px;
+        padding: 100px 30px 30px 30px;
+    }
+}

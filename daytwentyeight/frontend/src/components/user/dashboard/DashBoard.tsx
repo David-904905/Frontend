@@ -8,24 +8,20 @@ import Quote from "./Quote";
 import Calendar from "react-calendar";
 import Groups from "./groups/Groups";
 import PendingTasks from "./PendingTasks";
-import { useContext, useEffect } from "react";
+import { useEffect } from "react";
 
-import { AuthContext } from "@contexts/AuthContext";
-
+import useAuth from "@hooks/useAuth";
+import { useMenuOpen } from "@hooks/useMenuOpen";
 
 const DashBoard = () => {
-  const context = useContext(AuthContext);
-
-  if (!context)
-  {
-    return;
-  }
-  const {setIsHome} = context;
+  const {setIsHome} = useAuth();
   useEffect(() => {
     setIsHome(false);
   }, [])
+
+  const {setMenuOpen} = useMenuOpen();
   return (
-    <div className="dashboard-container">
+    <div className="dashboard-container" onClick={() => setMenuOpen(false)}>
       <div className="dashboard-sub-container">
         <div className="greet-user">
           <div className="user-image">

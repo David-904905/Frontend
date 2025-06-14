@@ -12,10 +12,12 @@ import SettingsBody from "./SettingsBody";
 import SettingsSearchModal from "./modals/SettingsSearchModal";
 import { useSettings } from "@hooks/useSettings";
 import SettingsEditModal from "./modals/SettingsEditModal";
+import { useMenuOpen } from "@hooks/useMenuOpen";
 
 const Settings = () => {
 
   const {showModal, showEditModal} = useSettings();
+  const { setMenuOpen } = useMenuOpen();
   
   const { setIsHome } = useAuth();
 
@@ -23,7 +25,7 @@ const Settings = () => {
     setIsHome(false);
   }, [])
 
-  return <div className="settings-main-container">
+  return <div className="settings-main-container" onClick={() => setMenuOpen(false)}>
     <SettingsHead />
     <SettingsBody />
     {showModal && <SettingsSearchModal />}

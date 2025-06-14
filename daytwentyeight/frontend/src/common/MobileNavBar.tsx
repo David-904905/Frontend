@@ -12,9 +12,10 @@ import { GiHamburgerMenu } from "react-icons/gi";
 import { IoMdNotifications } from "react-icons/io";
 import { IoShareOutline, IoSettingsSharp, IoClose } from "react-icons/io5";
 import { NavLink } from "react-router-dom";
+import { useMenuOpen } from "@hooks/useMenuOpen";
 
 const MobileNavBar = () => {
-  const [menuOpen, setMenuOpen] = useState<boolean>(false);
+  const {menuOpen, setMenuOpen} = useMenuOpen();
   return (
     <nav className="main-mobile-nav-container">
       <div className="logo-x-name-mobile">

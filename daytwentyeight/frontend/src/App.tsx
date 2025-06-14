@@ -1,8 +1,5 @@
-import { useContext } from "react";
 import { Outlet } from "react-router-dom";
 
-// contexts
-import { AuthContext } from "@contexts/AuthContext";
 // components
 import Sidebar from "./common/Sidebar";
 // css
@@ -10,14 +7,11 @@ import "./App.css";
 import MobileNavBar from "@common/MobileNavBar";
 import { MenuOpenProvider } from "@contexts/NavBarContext";
 import { useMenuOpen } from "@hooks/useMenuOpen";
+import useAuth from "@hooks/useAuth";
 
 const App = () => {
-  const {setMenuOpen} = 
-  const context = useContext(AuthContext);
-  if (!context) {
-    return;
-  }
-  const { loginStatus, isHome } = context;
+  // const {setMenuOpen} = useMenuOpen();
+  const {loginStatus, isHome} = useAuth();
   return (
     <>
       <MenuOpenProvider>

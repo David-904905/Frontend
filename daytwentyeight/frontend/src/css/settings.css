@@ -408,3 +408,13 @@
         width: 30px;
     }
 }
+
+
+@media (orientation: landscape) and (max-height: 450px)
+{
+    .settings-main-container
+    {
+        margin-left: 0px;
+        padding: 120px 30px 30px 30px;
+    }
+}

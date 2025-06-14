@@ -6,6 +6,8 @@ import { useContext, useEffect, useState } from "react";
 import { FaCamera } from "react-icons/fa";
 import { AuthContext } from "@contexts/AuthContext";
 import { useUserDetails } from "@hooks/useUserDetails";
+import useAuth from "@hooks/useAuth";
+import { useMenuOpen } from "@hooks/useMenuOpen";
 
 const Profile = () => {
   const context = useUserDetails();
@@ -21,18 +23,14 @@ const Profile = () => {
   const handleCoverImage = (e: any) => {};
   const handleProfileImage = (e: any) => {};
 
-  const contexttwo = useContext(AuthContext);
-
-  if (!contexttwo) {
-    return;
-  }
-  const { setIsHome } = contexttwo;
+  const { setIsHome } = useAuth();
+  const { setMenuOpen } = useMenuOpen();
   useEffect(() => {
     setIsHome(false);
   }, []);
 
   return (
-    <div className="profile-dashboard">
+    <div className="profile-dashboard" onClick={() => setMenuOpen(false)}>
       <div className="profile-container">
         <img src={coverImage} alt="cover-image" className="cover-image" />
         <label htmlFor="cover-img-upload-btn" className="camera-icon-container">
