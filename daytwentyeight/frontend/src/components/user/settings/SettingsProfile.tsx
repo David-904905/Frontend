@@ -21,7 +21,7 @@ const SettingsProfile = () => {
       </div>
       <div className="sett-profile-button">
         {/* implement me as a modal */}
-        <button className="edit-profile-btn ">Edit</button>
+        <button className="edit-profile-btn " onClick={() => setShowEditModal(true)}>Edit</button>
       </div>
       <div className="edit-btn-mobile" onClick={() => setShowEditModal(true)}>
         <button><FaRegEdit /></button>

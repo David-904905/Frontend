@@ -3,9 +3,11 @@ import { IoMailOutline } from "react-icons/io5";
 
 // hooks
 import { useUserDetails } from "@hooks/useUserDetails";
+import { useSettings } from "@hooks/useSettings";
 
 const SettingsMail = () => {
   const { email } = useUserDetails();
+  const { setShowAddEmailModal } = useSettings();
   return (
     <div className="settings-mail-container">
       <div className="settings-mail-message">
@@ -25,7 +27,7 @@ const SettingsMail = () => {
         </div>
       </div>
       <div className="add-email-button">
-        <button>+Add Email Address</button>
+        <button onClick={() => setShowAddEmailModal(true)}>+Add Email Address</button>
       </div>
     </div>
   );

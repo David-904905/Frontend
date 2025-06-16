@@ -19,7 +19,7 @@ const HomeNav = () => {
   if (!context) {
     return;
   }
-  const {menuOpen, setMenuOpen} = useMenuOpen();
+  const { menuOpen, setMenuOpen } = useMenuOpen();
   const { loginStatus } = context;
 
   return (
@@ -29,7 +29,10 @@ const HomeNav = () => {
           <h2>Ufune Nwed</h2>
         </NavLink>
       </div>
-      <div className={menuOpen ? "hideme" : "burger"} onClick={() => setMenuOpen(true)}>
+      <div
+        className={menuOpen ? "hideme" : "burger"}
+        onClick={() => setMenuOpen(true)}
+      >
         <GiHamburgerMenu />
       </div>
       <div className={`nav-link-wrapper ${menuOpen ? "open" : ""}`}>
@@ -39,17 +42,24 @@ const HomeNav = () => {
         <div className="nav-links-middle">
           <ul>
             <li>
-              <a href="/#about-us" onClick={() => setMenuOpen(false)}>About</a>
-              
+              <a href="/#about-us" onClick={() => setMenuOpen(false)}>
+                About
+              </a>
             </li>
             <li>
-              <a href='/#mission-statement' onClick={() => setMenuOpen(false)}>Mission</a>
+              <a href="/#mission-statement" onClick={() => setMenuOpen(false)}>
+                Mission
+              </a>
             </li>
             <li>
-              <a href='/#contribute' onClick={() => setMenuOpen(false)}>Contact Us</a>
+              <a href="/#contribute" onClick={() => setMenuOpen(false)}>
+                Contact Us
+              </a>
             </li>
             <li>
-              <a href='/#contact-us' onClick={() => setMenuOpen(false)}>Contribute</a>
+              <a href="/#contact-us" onClick={() => setMenuOpen(false)}>
+                Contribute
+              </a>
             </li>
           </ul>
         </div>

@@ -1,0 +1,42 @@
+@import "@css/css-variables/variable.css";
+
+.lazyfallback-main-container {
+  margin-left: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.spinning-circle-container
+{
+    padding: 30px;
+}
+
+.fallback-circle {
+  height: 50px;
+  width: 50px;
+  border: 2px solid rgb(181, 177, 177);
+  border-top: 4px solid var(--bg-color);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+
+@media (max-width: 768px)
+{
+    .lazyfallback-main-container
+    {
+        margin-left: 0;
+        padding-top: 100px;
+    }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

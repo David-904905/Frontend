@@ -56,6 +56,8 @@ export interface SettingsContextPayload {
   setShowModal: React.Dispatch<SetStateAction<boolean>>;
   showEditModal: boolean;
   setShowEditModal: React.Dispatch<SetStateAction<boolean>>;
+  showAddEmailModal: boolean;
+  setShowAddEmailModal: React.Dispatch<SetStateAction<boolean>>;
 }
 
 export interface Children {
@@ -85,4 +87,20 @@ export interface AuthContextDependency {
   Login: (token: LoginPayLoad) => Promise<void>;
   SignUp: (payload: SignUpPayLoad) => Promise<void>;
   Logout: () => void;
+}
+
+
+
+export interface ScreenSizes
+{
+  isMobile: boolean;
+  setIsMobile: React.Dispatch<SetStateAction<boolean>>;
+  isMediumScreen: boolean;
+  setIsMediumScreen: React.Dispatch<SetStateAction<boolean>>;
+}
+
+export interface LoadingContextPayload
+{
+  isLoading: boolean;
+  setIsLoading: React.Dispatch<SetStateAction<boolean>>;
 }

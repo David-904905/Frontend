@@ -108,6 +108,36 @@ npm i react-beautifyl-dnd
 
 - college friendly
 
+
+# Lazy loading
+- lazy loading is the process of preventing heavy components from loading when the application starts initially, instead, it loads when the user is going to make use of that components, and displays a fallback ui for the user, while it fetches the component and the resources of that component.
+
+
+``` JavaScript
+
+// to make use of lazy and suspense, first import them
+
+import { Suspense, lazy } from "react";
+
+// regular import
+
+import Profile from "./Profile";
+
+// lazy loading
+
+const Profile = lazy(() => import("./Profile"));
+
+
+// then when making use of the profile component, wrap it in a suspense tag.
+
+<Suspense fallback={
+    <div>Loading...</div>
+}></Suspense>
+
+
+
+```
+
 # implement settings stuff
 
 - loop through the values of a hashmap, match the value with that of the hashmap, if you have medium to exact match, return the value, then the value with the closest match, will be a url to that component, then that url will be displayed in the dropdown that occurs when the user clicks enter on the search, but display the url as cards, not just as a text, then when the user clicks on that url, it navigates them to that component.
@@ -116,6 +146,17 @@ npm i react-beautifyl-dnd
 
 - For the dashboard stuff and home page, we can implement it in such a way that after logging in, a token is stored in the local storage, then the login status is changed, then we can have a useeffect that fires when the logins status changes, that useeffect will then trigger a function that fetches the user details, and caches them in the localstorage, and then that cached data will be used to update the value in the ui, without causing a full on page reload.
 
+
+# React Notes
+
+- The main.tsx semicolon error usually represents a build tool error.
+
+
+# Discoveries
+
+- The Man United anthem has the tune of Mine Eyes Have Seen the Glory.
+
+- Abide with me.
 
 # Notes
 
