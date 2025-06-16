@@ -1,0 +1,13 @@
+.accessibility-head
+{
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 20px 0px 0px;
+}
+
+.accessibility-profile-image img
+{
+    height: 50px;
+    width: 50px;
+    border-radius: 20%;
+}

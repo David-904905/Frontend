@@ -1,0 +1,30 @@
+@import "@css/css-variables/variable.css";
+
+.folder-main-container
+{
+    margin-left: 200px;
+}
+
+.folder-icon-large
+{
+    font-size: 70px;
+    color: var(--folder-color);
+}
+
+.folder-component-container
+{
+    margin: 70px 0px 0px 0px;
+    width: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 30px;
+    border-radius: 10%;
+    transition: 0.2s ease-in-out;
+}
+
+.folder-component-container:hover
+{
+    background-color: var(--folder-hover-color);
+}

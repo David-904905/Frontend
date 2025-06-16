@@ -104,3 +104,27 @@ export interface LoadingContextPayload
   isLoading: boolean;
   setIsLoading: React.Dispatch<SetStateAction<boolean>>;
 }
+
+export type UUID = string;
+
+export type FileSystemNode = File | Folder;
+
+export interface File
+{
+  type: "file";
+  fileName: string;
+  fileSize: number;
+  modifiedAt: Date;
+  creationDate: Date;
+}
+
+
+export interface Folder
+{
+  type: "folder";
+  folderName: string;
+  folderUUID: UUID;
+  folderInternals: FileSystemNode[];
+}
+
+

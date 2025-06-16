@@ -12,6 +12,7 @@ import { useEffect } from "react";
 
 import useAuth from "@hooks/useAuth";
 import { useMenuOpen } from "@hooks/useMenuOpen";
+import { useUserDetails } from "@hooks/useUserDetails";
 
 const DashBoard = () => {
   const {setIsHome} = useAuth();
@@ -20,6 +21,7 @@ const DashBoard = () => {
   }, [])
 
   const {setMenuOpen} = useMenuOpen();
+  const { name } = useUserDetails();
   return (
     <div className="dashboard-container" onClick={() => setMenuOpen(false)}>
       <div className="dashboard-sub-container">
@@ -33,7 +35,7 @@ const DashBoard = () => {
           </div>
         </div>
         <div className="other-text">
-          <h2>Welcome Ukpong Nsikak</h2>
+          <h2>Welcome {name}</h2>
           <p>
             Here's the latest updates, wishing you a wonderful study session
           </p>
