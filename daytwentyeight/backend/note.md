@@ -476,8 +476,11 @@ pip install "pydantic[email]"
 
 ```
 
+- There are some cases where you need or want to return some data that is not exactly what the type declares. For example, you could want to return a dictionary or a database object, but declare it as a Pydantic model. This way the Pydantic model would do all the data documentation, validation, etc. for the object that you returned (e.g. a dictionary or database object).
 
 
+
+## Leet code stuff
         min_count = 0
         max_count = 0
 
@@ -524,3 +527,36 @@ class Solution:
 
 
 3024
+
+
+
+# Notes
+
+- No one can comprehend what is going on under the shadow of the sun.
+
+- Ecclesiastes 9, a living dog is better than a dead lion.
+
+- What ever your hand finds to do, do it with all your might.
+
+- The race is not to the swift, time and chance happeneth to them all, no one knows when their times will come.
+
+- Wisdom is better than strength, better than weapons of war.
+
+- A little folly outweighs wisdom and honour.
+
+- Calmness can lay great offenses to rest.
+
+- Because of idle hands, the house leaks, and money is the answer of everything
+
+- Ship your grains across the sea, thou shalt find it after many days.
+
+- Sow your seeds in the morning, and in the evening, let not thy hands be idle.
+
+- Be happy while you are young, and let your heart give you joy, cast out anxiety from your heart and trouble from your body.
+
+- Remember your creator in the days of your youth, before the sun and the moon go dark.
+
+- Remember him before the silver cord is severed, and the spirit returns to God who gave it.
+
+- Be warned of making addition to the words of the wise, here is the conclusion, fear God and keep his commandments, for God will bring everything into judgement, hidden or open, whether it be good or evil.
+

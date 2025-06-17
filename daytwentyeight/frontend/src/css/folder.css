@@ -9,6 +9,7 @@
 {
     font-size: 70px;
     color: var(--folder-color);
+    transition: 0.2s ease-in-out;
 }
 
 .folder-component-container
@@ -21,10 +22,10 @@
     flex-direction: column;
     padding: 30px;
     border-radius: 10%;
-    transition: 0.2s ease-in-out;
+    
 }
 
-.folder-component-container:hover
+.folder-icon-large:hover
 {
-    background-color: var(--folder-hover-color);
+    color: var(--folder-hover-color);
 }

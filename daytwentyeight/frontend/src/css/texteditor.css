@@ -1,0 +1,44 @@
+@import "@css/css-variables/variable.css";
+
+.editor-container {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 8px;
+  max-width: 80%;
+  margin: 1rem auto;
+  font-family: Arial, sans-serif;
+}
+
+.editor-toolbar {
+  margin-bottom: 8px;
+  display: flex;
+  gap: 2rem;
+  justify-content: space-between;
+}
+
+.editor-toolbar h3
+{
+    padding: 5px;
+}
+
+.editor-toolbar button {
+  margin-right: 4px;
+  padding: 6px 12px;
+  background: #f0f0f0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.editor-toolbar button.is-active {
+  background-color: #007bff;
+  color: #fff;
+  border-color: #007bff;
+}
+
+.editor-content {
+  min-height: 150px;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}

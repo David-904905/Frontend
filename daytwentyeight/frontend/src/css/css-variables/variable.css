@@ -1,10 +1,17 @@
-
 :root {
-  --bg-color: #FAF8F1;
-  --text-color: #2E2E2E;
+  --bg-color: #faf8f1;
+  --text-color: #2e2e2e;
   --accent-color: #002147;
-  --secondary-text: #6E6E6E;
+  --secondary-text: #6e6e6e;
   --button-color: #800020;
   --folder-color: rgba(4, 95, 175, 0.364);
-  --folder-hover-color: rgb(203, 203, 203);
+  --folder-hover-color: rgba(38, 152, 251, 0.364);
+  --icon-save-color: #a0522d;
+  --icon-share-color: #4682b4;
+  --icon-export-color: #556b2f;
+  --icon-delete-color: #8b0000;
+  --icon-save-color-two: #c17c74; 
+  --icon-share-color-two: #6a8eae; 
+  --icon-export-color-two: #8c9c5a; 
+  --icon-delete-color-two: #b35c5c; 
 }
