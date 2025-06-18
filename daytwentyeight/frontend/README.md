@@ -206,3 +206,22 @@ const Profile = lazy(() => import("./Profile"));
 - The fear of the LORD is the beginning of wisdom, if you fear the LORD, wisdom will come into fruition in your life.
 
 
+# Reflections on the morning bible reading of 17th June 2025
+
+- Guard your steps when you go to the house of the LORD, go near to listen, rather than to offer the sacrifice of fools who do not know that they do wrong.
+
+- Do not be quick with your mouth, or quick with your heart to utter anything before God, let your words be few.
+
+- When you make a vow to God, do not delay to fufil it, fufil your vow, it is better not to make a vow but to make one and not fufil it, do not let your mouth lead you into sin.
+
+- Who ever loves money, never has enough, who ever loves wealth, is never satisfied.
+
+- Better what the eye sees than that with it craves appetite.
+
+## Ecclesiates Chapter 7
+
+- Do not be over righteous, neither be over wise, why destroy yourself.
+
+- Who ever fears God, will avoid all extremes. 
+
+- There is no one on earth who is righteous, no one who does what is right at all times and never sins, do not pay attention to every word people say, or you may hear your servants cursing you, for you know in your heart that many times you yourself have cursed others. 

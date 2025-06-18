@@ -1,0 +1,58 @@
+@import "@css/css-variables/variable.css";
+
+
+.notes-main-container
+{
+    margin-left: 200px;
+}
+
+.note-meta-data
+{
+    margin-left: 50px;
+    padding: 50px 0px 50px 0px;
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.accessibility-buttons
+{
+    display: flex;
+    gap: 1.5rem;
+    margin-right: 200px;
+}
+
+
+.accessibility-buttons button
+{
+    width: 70px;
+    height: 30px;
+}
+
+.note-header-icons
+{
+    font-size: 20px;
+}
+
+.note-save-button .note-header-icons
+{
+    fill: var(--icon-save-color-two);
+}
+
+.note-share-button .note-header-icons
+{
+    fill: var(--icon-share-color);
+}
+
+.note-export-button .note-header-icons
+{
+    fill: var(--icon-export-color);
+}
+
+.note-delete-button .note-header-icons
+{
+    fill: var(--icon-delete-color);
+}

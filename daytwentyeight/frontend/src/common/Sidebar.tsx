@@ -35,7 +35,7 @@ const Sidebar = () => {
             <ul className="top-utilities-link">
                 <li className="top-links-item"><NavLink to={'/user/folder'}><FaFolderOpen /></NavLink><p>Folder</p></li>
                 <li className="top-links-item"><NavLink to={'/'}><CiSaveDown2 /></NavLink><p>Downloads</p></li>
-                <li className="top-links-item"><NavLink to={'/'}><BiSolidNotepad /></NavLink><p>Notes</p></li>
+                <li className="top-links-item"><NavLink to={'/user/notes'}><BiSolidNotepad /></NavLink><p>Notes</p></li>
                 <li className="top-links-item"><NavLink to={'/'}><FaTasks /></NavLink><p>Tasks</p></li>
                 <li className="top-links-item"><NavLink to={'/'}><IoMdNotifications /></NavLink><p>Notifications</p></li>
                 <li className="top-links-item"><NavLink to={'/'}><IoShareOutline /></NavLink><p>Share</p></li>

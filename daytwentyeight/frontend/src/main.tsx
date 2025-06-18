@@ -16,6 +16,7 @@ import NotFound from "@common/errors/NotFound.tsx";
 import LazyFallback from "@common/fallbacks/LazyFallback.tsx";
 import SubFolder from "./components/ui/userfolder/SubFolder.tsx";
 import FoldersHome from "./components/ui/userfolder/FoldersHome.tsx";
+import NotesHome from "./components/ui/usernotes/NotesHome.tsx";
 // Lazy-loaded components
 const DashBoard = lazy(
   () => import("./components/user/dashboard/DashBoard.tsx")
@@ -62,6 +63,9 @@ createRoot(document.getElementById("root")!).render(
                   <Route path="folder">
                     <Route index element={<FoldersHome />}/>
                     <Route path="sub-folder/:folder_uuid" element={<SubFolder />} />
+                  </Route>
+                  <Route path="notes">
+                    <Route index element={<NotesHome />} />
                   </Route>
                 </Route>
 
