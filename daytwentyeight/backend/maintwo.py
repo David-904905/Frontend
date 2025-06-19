@@ -1,5 +1,6 @@
 from typing import Annotated, Any
 from fastapi import FastAPI, Cookie
+from fastapi.responses import RedirectResponse
 
 from models.cookies import Cookies
 from models.payloads import MultipleParams
@@ -35,3 +36,11 @@ async def get_with_response_decorator() -> Any:
         {"name": "Portal Gun", "price": 42.3},
         {"name": "Portal Gun", "price": 42.3},
     ]
+
+
+
+# redirect response test
+@app.get("/portal")
+async def get_portal() -> RedirectResponse:
+    return RedirectResponse(url='https://island-resorts.vercel.app')
+

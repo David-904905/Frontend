@@ -23,12 +23,12 @@ const DashBoard = () => {
   const {setMenuOpen} = useMenuOpen();
   const { name } = useUserDetails();
   return (
-    <div className="dashboard-container" onClick={() => setMenuOpen(false)}>
-      <div className="dashboard-sub-container">
-        <div className="greet-user">
-          <div className="user-image">
+    <div className="ml-[200px] flex flex-col justify-between h-screen text-[var(--text-color)]" onClick={() => setMenuOpen(false)}>
+      <div className="dashboard-sub-container flex gap-5 text-neutral-700 font-bold text-[15px]">
+        <div className="image-container">
+          <div className="user-image ">
             <img
-              className="welcome-img-greet"
+              className="rounded-full"
               src="https://placehold.co/90"
               alt=""
             />
