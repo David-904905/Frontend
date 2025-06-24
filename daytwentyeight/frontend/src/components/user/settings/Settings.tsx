@@ -14,10 +14,11 @@ import { useSettings } from "@hooks/useSettings";
 import SettingsEditModal from "./modals/SettingsEditModal";
 import { useMenuOpen } from "@hooks/useMenuOpen";
 import SettingsAddEmailModal from "./modals/SettingsAddEmailModal";
+import Notifications from "../../ui/notifications/Notifications";
 
 const Settings = () => {
 
-  const {showModal, showEditModal, showAddEmailModal} = useSettings();
+  const {showModal, showEditModal, showAddEmailModal, showNotificationModal} = useSettings();
   const { setMenuOpen } = useMenuOpen();
   
   const { setIsHome } = useAuth();
@@ -32,6 +33,7 @@ const Settings = () => {
     {showModal && <SettingsSearchModal />}
     {showEditModal && <SettingsEditModal />}
     {showAddEmailModal && <SettingsAddEmailModal />}
+    {showNotificationModal && <Notifications />}
     
   </div>;
 };

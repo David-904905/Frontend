@@ -8,7 +8,7 @@ import { useUserDetails } from "@hooks/useUserDetails";
 const SettingsHead = () => {
   const date = new Date();
   const dateString = date.toDateString();
-  const { searchValue } = useSettings();
+  const { searchValue, setShowNotificationModal } = useSettings();
   const { profileImage } = useUserDetails();
 
   const { name } = useUserDetails();
@@ -25,7 +25,7 @@ const SettingsHead = () => {
       </div>
       <div className="search-notify-pic">
         <SettingsSearchBar />
-        <div className="notification-icon-container">
+        <div className="notification-icon-container pointer" onClick={() => setShowNotificationModal(true)}>
           <IoNotificationsOutline />
         </div>
         <div className="settings-profile-image">

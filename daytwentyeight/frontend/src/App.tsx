@@ -11,6 +11,11 @@ import useAuth from "@hooks/useAuth";
 const App = () => {
   // const {setMenuOpen} = useMenuOpen();
   const {loginStatus, isHome} = useAuth();
+
+  const loader = document.getElementById('loading-screen');
+  if(loader) loader.remove();
+
+
   return (
     <>
       <MenuOpenProvider>

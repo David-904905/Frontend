@@ -225,3 +225,9 @@ const Profile = lazy(() => import("./Profile"));
 - Who ever fears God, will avoid all extremes. 
 
 - There is no one on earth who is righteous, no one who does what is right at all times and never sins, do not pay attention to every word people say, or you may hear your servants cursing you, for you know in your heart that many times you yourself have cursed others. 
+
+## Reflections
+
+- With much wisdom comes great sorrow, if one know that if he steps out, he will die
+
+- Phillipians 2 :)

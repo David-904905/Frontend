@@ -58,6 +58,8 @@ export interface SettingsContextPayload {
   setShowEditModal: React.Dispatch<SetStateAction<boolean>>;
   showAddEmailModal: boolean;
   setShowAddEmailModal: React.Dispatch<SetStateAction<boolean>>;
+  showNotificationModal: boolean;
+  setShowNotificationModal: React.Dispatch<SetStateAction<boolean>>;
 }
 
 export interface Children {
@@ -128,3 +130,9 @@ export interface Folder
 }
 
 
+export interface Notification
+{
+  title: string;
+  description: string;
+  time: Date;
+}

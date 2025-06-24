@@ -17,6 +17,7 @@ import LazyFallback from "@common/fallbacks/LazyFallback.tsx";
 import SubFolder from "./components/ui/userfolder/SubFolder.tsx";
 import FoldersHome from "./components/ui/userfolder/FoldersHome.tsx";
 import NotesHome from "./components/ui/usernotes/NotesHome.tsx";
+import Notifications from "./components/ui/notifications/Notifications.tsx";
 // Lazy-loaded components
 const DashBoard = lazy(
   () => import("./components/user/dashboard/DashBoard.tsx")
@@ -67,6 +68,7 @@ createRoot(document.getElementById("root")!).render(
                   <Route path="notes">
                     <Route index element={<NotesHome />} />
                   </Route>
+                  <Route path="notifications" element={<Notifications />} />
                 </Route>
 
                 <Route path="auth">
