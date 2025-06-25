@@ -22,13 +22,13 @@ const SettingsEditModal = () => {
   }, []);
 
   return (
-    <div className="settings-search-modal" onClick={() => setShowEditModal(false)}>
-      <div className="modal-wrapper "  onClick={(e) => e.stopPropagation()}>
+    <div className="settings-search-modal " onClick={() => setShowEditModal(false)}>
+      <div className="modal-wrapper !w-[300px] sm:"  onClick={(e) => e.stopPropagation()}>
         <div className="modal-search-header">
           <h2 className="text-[25px] font-bold">Edit</h2>
         </div>
         <div className="search-input-n-button fname-email-overide">
-          <div className="modal-input">
+          <div className="modal-input ">
             <label htmlFor="profile-picture" className="flex gap-5 items-center">Profile Picture: <MdAddAPhoto className="text-xl" /></label>
             <input type="file" id="profile-picture" className="hidden" /><br />
             <label htmlFor="settings-fname-edit">Full Name: </label>
@@ -39,7 +39,7 @@ const SettingsEditModal = () => {
               id="settings-fname-edit"
               value={fullName}
               placeholder="name..."
-              className="bg-neutral-200 text-neutral-950 "
+              className="bg-white text-[var(--text-color)] w-full"
               onChange={(e) => setFullName(e.target.value)}
             />{" "}
             <br />
@@ -51,11 +51,11 @@ const SettingsEditModal = () => {
               id="settings-email-edit"
               placeholder="email..."
               value={email}
-              className="bg-neutral-200 text-neutral-950"
+              className="bg-white text-[var(--text-color)] w-full"
               onChange={(e) => setEmail(e.target.value)}
             />
           </div>
-          <button className="edit-fn-em-overide flex justify-center">
+          <button className="edit-fn-em-overide flex justify-center !w-full">
             <FaCheckCircle />
           </button>
         </div>

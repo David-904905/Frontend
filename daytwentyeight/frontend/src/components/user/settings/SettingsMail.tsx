@@ -27,7 +27,7 @@ const SettingsMail = () => {
         </div>
       </div>
       <div className="add-email-button">
-        <button onClick={() => setShowAddEmailModal(true)}>+Add Email Address</button>
+        <button className="bg-[var(--accent-color)] text-white" onClick={() => setShowAddEmailModal(true)}>+Add Email Address</button>
       </div>
     </div>
   );
