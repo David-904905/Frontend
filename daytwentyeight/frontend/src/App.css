@@ -2,12 +2,23 @@
 
 @import "@css/css-variables/variable.css";
 
-
 /* * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 } */
+
+.scroll-hide
+{
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.scroll-hide::-webkit-scrollbar
+{
+  display: none;
+}
+
 
 body {
   font-family: "Montserrat", "cursive";
@@ -16,6 +27,7 @@ body {
   color: var(--text-color);
 
 }
+
 
 @media (max-width: 768px) {
   .sidebar {

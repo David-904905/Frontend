@@ -51,6 +51,7 @@ const SettingsInputs = () => {
             name="fullname"
             placeholder="Full name"
             value={fullName}
+            className="bg-white border-1"
             onChange={(e) => setFullName(e.target.value)}
           />
           <br />
@@ -60,6 +61,7 @@ const SettingsInputs = () => {
             name="gender"
             id="gender"
             value={gender}
+            className="bg-white border-1"
             onChange={(e) => setGender(e.target.value)}
           >
             <option value="male">Male</option>
@@ -72,6 +74,7 @@ const SettingsInputs = () => {
             name="language"
             id="language"
             value={language}
+            className="bg-white border-1"
             onChange={(e) => setLanguage(e.target.value)}
           >
             <option value="ibo">Ásụ̀sụ́ Ìgbò</option>
@@ -92,6 +95,7 @@ const SettingsInputs = () => {
             id="nickname"
             placeholder="Nick name"
             value={nickName}
+            className="bg-white border-1"
             onChange={(e) => setNickName(e.target.value)}
           />
           <br />
@@ -101,6 +105,7 @@ const SettingsInputs = () => {
             id="country"
             name="country"
             value={country}
+            className="bg-white border-1"
             onChange={(e) => setCountry(e.target.value)}
           >
             <option value="Afghanistan">Afghanistan</option>
@@ -405,6 +410,7 @@ const SettingsInputs = () => {
             name="timezone-select"
             id="timezone"
             value={selectedZone}
+            className="bg-white border-1"
             onChange={(e) => setSelectedZone(e.target.value)}
           >
             {timezones.map((tz: any) => (

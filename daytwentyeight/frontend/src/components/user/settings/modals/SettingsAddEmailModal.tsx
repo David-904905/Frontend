@@ -28,13 +28,14 @@ const SettingsAddEmailModal = () => {
         <div className="modal-search-header">
           <h2>Add email</h2>
         </div>
-        <div className="search-input-n-button">
+        <div className="search-input-n-button flex">
           <input
             type="email"
             name="newemail-settings"
             id="newemail-settings"
             value={newEmail}
             placeholder="example@mail.com"
+            className="bg-white text-[var(--text-color)]"
             onChange={(e) => setNewEmail(e.target.value)}
           />
           <button>

@@ -1,5 +1,9 @@
 import { useSettings } from "@hooks/useSettings";
 import SingleNotification from "./SingleNotification";
+import { IoMdCloseCircle } from "react-icons/io";
+
+
+
 
 const date = new Date();
 
@@ -8,22 +12,49 @@ const Notifications = () => {
 
   return (
     <div
-      className="fixed inset-0 z-40 flex bg-[rgba(0,0,0,0.1)] bg-opacity-15"
+      className="fixed inset-0 z-40 flex items-start justify-end bg-[rgba(0,0,0,0.1)]"
       onClick={() => setShowNotificationModal(false)}
     >
       <div
-        className="relative h-[300px] w-[300px] p-6 mt-[400px] bg-[var(--bg-color)] z-50 text-[var(--text-color)] rounded shadow-lg border-2 border-neutral-900"
+        className="relative !mt-[30px] !mx-[30px] lg:w-[400px] h-[400px] w-[250px]   bg-[var(--bg-color)] text-[var(--text-color)] rounded-xl shadow-lg border-1 border-neutral-900 flex flex-col"
         onClick={(e) => e.stopPropagation()}
       >
-        <div className="notification-header mb-4">
-          <h2 className="text-lg font-semibold p-5 rounded">Notifications</h2>
+        {/* Header */}
+        <div className="flex justify-between items-center !px-4 !py-2 border-b-2 border-[var(--text-color)]">
+          <h2 className="text-lg font-semibold">Notifications</h2>
+          <button onClick={() => setShowNotificationModal(false)}>
+            <IoMdCloseCircle className="text-red-700 text-xl" />
+          </button>
         </div>
-        <div className="notifications-container space-y-2">
+
+        {/* Scrollable Notifications Area */}
+        <div className="flex-1 overflow-auto !p-4 space-y-3 scroll-hide">
           <SingleNotification
             title="Message"
-            description="You have a new message from Peter"
+            description="New message from peter"
             time={date}
           />
+          <SingleNotification
+            title="Message"
+            description="New message from peter"
+            time={date}
+          />
+          <SingleNotification
+            title="Message"
+            description="New message from peter"
+            time={date}
+          />
+          <SingleNotification
+            title="Message"
+            description="New message from peter"
+            time={date}
+          />
+          <SingleNotification
+            title="Message"
+            description="New message from peter"
+            time={date}
+          />
+          {/* Add more notifications as needed */}
         </div>
       </div>
     </div>
